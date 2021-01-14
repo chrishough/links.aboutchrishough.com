@@ -8,7 +8,7 @@ activate :external_pipeline,
 Slim::Engine.set_default_options(pretty: true)
 
 set :protocol, 'https://'
-set :host, 'links.aboutchrishough.com.com'
+set :host, 'links.aboutchrishough.com'
 set :port, 80
 
 require_relative '../lib/build'

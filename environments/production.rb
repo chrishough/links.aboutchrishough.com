@@ -15,7 +15,7 @@ activate :minify_html do |html|
 end
 
 set :protocol, 'https://'
-set :host, 'links.aboutchrishough.com.com'
+set :host, 'links.aboutchrishough.com'
 set :port, 80
 
 require_relative '../lib/build'
