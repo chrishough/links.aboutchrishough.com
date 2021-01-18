@@ -21,6 +21,7 @@ helpers FolderHelpers
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/sitemap.xml', layout: false
 
 ignore 'assets/stylesheets/*'
 ignore 'assets/javascripts/*'
