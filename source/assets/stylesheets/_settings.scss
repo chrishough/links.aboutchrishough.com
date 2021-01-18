@@ -8,27 +8,26 @@ $color-three: #F3F3F3;
 $color-four: #3C1874;
 $color-five: #283747;
 
+@mixin font-color { color: $color-three; }
+@mixin font-highlight-color { color: $highlight-color; }
+
+$highlight-color: $color-one;
+$link-color: $color-one;
+
 $backdrop-opacity: 0.8;
 $backdrop-opacity-dark: 0.9;
 $backdrop-opacity-light: 0.7;
 $backdrop-opacity-medium-light: 0.5;
 $backdrop-opacity-super-light: 0.2;
 
-$radius: 1rem;
-
-$minimum-height: 700px;
 $grid-breakpoints: (
   xs: 0,
   minimium: 375px,
-  transition: 450px,
+  maximum: 500px,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  maximum: 1000px,
-  xl: 1200px,
-  xxl: 1400px,
-  xxxl: 1800px,
-  xxxxl: 2450px
+  xl: 1200px
 );
 
 $zindex-cover: 10000 !default;

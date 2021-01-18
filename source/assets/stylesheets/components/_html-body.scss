@@ -12,4 +12,7 @@ body {
   min-height: 100% !important;
   background-color: $color-black;
   font-size: 1rem;
+
+  @include font-color();
+  @include primary-font();
 }

@@ -5,8 +5,25 @@ meta:
   focus: Nice to meet you!
   description: This is the personal landing page of Chris Hough.  From this launch site you can connect with me on your favorite social networks, see the products I have developed, research my CV, etc. I am happy to connect with you.  If you have a question for me please reach out via email or social media.
 
-
-
+bio:
+  name: Chris Hough
+  slogan: I'm a product focused entrepreneurial-minded engineer who loves laughter, code quality, and building empathic cultures.  My truth. I believe you have to love the process, not the shit the process buys you.
+  cities:
+    -
+      id: 1
+      name: Chicago
+    -
+      id: 2
+      name: Boulder
+    -
+      id: 3
+      name: Manhattan
+    -
+      id: 4
+      name: Portland
+    -
+      id: 5
+      name: Las Vegas
 
 social:
   email: talk@aboutchrishough.com

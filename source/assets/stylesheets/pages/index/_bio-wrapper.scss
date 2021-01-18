@@ -1,0 +1,50 @@
+.bio-wrapper {
+  display: flex;
+  padding-right: 0;
+  text-align: center;
+
+  .avatar-wrapper {
+    img {
+      border-radius: 50%;
+      max-height: 150px;
+      border: 2px solid $highlight-color;
+      float: right;
+    }
+  }
+
+  .name-locations-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2rem;
+
+    .name {
+      font-weight: bold;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      text-decoration: overline;
+      text-decoration-color: $color-one;
+
+      @include impact-font();
+    }
+
+    .locations {
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .slogan-wrapper {
+    padding-top: 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+  }
+}
