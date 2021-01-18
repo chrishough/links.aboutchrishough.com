@@ -7,9 +7,9 @@ section[class="col-12 mx-auto section-outer-wrapper"]
   div[class="row"]
     div[class="col-12 mx-auto section-inner-wrapper"]
       div[class="row bio-wrapper"]
-        div[class="col-6 mx-auto avatar-wrapper"]
+        div[class="col-5 mx-auto avatar-wrapper"]
           img[src="#{image_path('avatar/20201216.jpg')}"]
-        div[class="col-6 name-locations-wrapper"]
+        div[class="col-7 name-locations-wrapper"]
           div[class="row name"]
             = data.components.bio.name
           div[class="row locations"]
@@ -19,3 +19,11 @@ section[class="col-12 mx-auto section-outer-wrapper"]
                   = city.name
         div[class="col-12 mx-auto slogan-wrapper"]
           = data.components.bio.slogan
+
+      div[class="row social-wrapper"]
+        div[class="col-12"]
+          ul
+            - data.components.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
+              li
+                = link_to(social.url, target: :_blank) do
+                  i[class="#{social.class_name}" alt="#{social.name}"]

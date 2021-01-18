@@ -7,6 +7,7 @@ meta:
 
 bio:
   name: Chris Hough
+  email: talk@aboutchrishough.com
   slogan: I'm a product focused entrepreneurial-minded engineer who loves laughter, code quality, and building empathic cultures.  My truth. I believe you have to love the process, not the shit the process buys you.
   cities:
     -
@@ -26,12 +27,33 @@ bio:
       name: Las Vegas
 
 social:
-  email: talk@aboutchrishough.com
-  twitter: https://twitter.com/chrishough
-  instagram: https://www.instagram.com/chrishough/
-  github: https://github.com/chrishough
-  facebook: https://www.facebook.com/noconformitynoregrets
-  linkedin: https://www.linkedin.com/in/chrishough
+  -
+    id: 1
+    name: twitter
+    url: https://twitter.com/chrishough
+    class_name: fab fa-twitter-square
+  -
+    id: 2
+    name: instagram
+    url: https://www.instagram.com/chrishough/
+    class_name: fab fa-instagram-square
+  -
+    id: 3
+    name: github
+    url: https://github.com/chrishough
+    class_name: fab fa-github-square
+  -
+    id: 4
+    name: facebook
+    url: https://www.facebook.com/noconformitynoregrets
+    class_name: fab fa-facebook-square
+  -
+    id: 5
+    name: linkedin
+    url: https://www.linkedin.com/in/chrishough
+    class_name: fab fa-linkedin
+
+interweb:
   resume: https://github.com/chrishough/my-resume
   configurations: https://github.com/chrishough/my-configurations
   website: http://aboutchrishough.com/

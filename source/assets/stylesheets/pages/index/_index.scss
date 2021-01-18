@@ -1,12 +1,11 @@
 #index {
-  background: url('#{$image-path}/pages/background.jpg') no-repeat;
-  background-size: cover;
-  background-position: right center;
-
   main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url('#{$image-path}/pages/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: right center;
     height: 100vh;
     padding: 0;
   }
@@ -16,7 +15,7 @@
 
     background-color: rgba(0, 0, 0, $backdrop-opacity-medium-light);
     max-width: map-get($grid-breakpoints, "maximum");
-    padding: 1.5rem 2rem;
+    padding: 1.5rem;
 
     @include media-breakpoint-up(xs) {
       border-top: 2px solid $color-four;
@@ -29,5 +28,6 @@
     }
 
     @import "pages/index/bio-wrapper";
+    @import "pages/index/social-wrapper";
   }
 }
