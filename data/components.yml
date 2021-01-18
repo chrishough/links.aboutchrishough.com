@@ -1,11 +1,20 @@
 url: https://links.aboutchrishough.com.com
 
 meta:
-  description: TBD
+  title: Chris Hough
+  focus: Nice to meet you!
+  description: This is the personal landing page of Chris Hough.  From this launch site you can connect with me on your favorite social networks, see the products I have developed, research my CV, etc. I am happy to connect with you.  If you have a question for me please reach out via email or social media.
+
+
+
 
 social:
-  email: TBD
-  shortname: TBD
-  formalname: TBD
-  founder: TBD
-  focus: TBD
+  email: talk@aboutchrishough.com
+  twitter: https://twitter.com/chrishough
+  instagram: https://www.instagram.com/chrishough/
+  github: https://github.com/chrishough
+  facebook: https://www.facebook.com/noconformitynoregrets
+  linkedin: https://www.linkedin.com/in/chrishough
+  resume: https://github.com/chrishough/my-resume
+  configurations: https://github.com/chrishough/my-configurations
+  website: http://aboutchrishough.com/
