@@ -1,19 +1,48 @@
 #index {
   main {
     display: flex;
-    align-items: center;
-    justify-content: center;
     background: url('#{$image-path}/pages/background.jpg') no-repeat;
     background-size: cover;
     background-position: right center;
     height: 100vh;
     padding: 0;
+
+    @include media-breakpoint-up(xs) {
+      align-items: initial;
+      justify-content: initial;
+    }
+
+    @include media-breakpoint-up(md) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section-outer-wrapper {
+    @include media-breakpoint-up(xs) {
+      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+      padding-top: 1rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: initial;
+      background-color: initial;
+      box-shadow: initial;
+    }
   }
 
   .section-inner-wrapper {
-    @include box-shadow-all-sides();
+    @include media-breakpoint-up(xs) {
+      background-color: initial;
+      box-shadow: initial;
+    }
 
-    background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+    @include media-breakpoint-up(md) {
+      @include box-shadow-all-sides();
+
+      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+    }
+
     max-width: map-get($grid-breakpoints, "maximum");
     padding: 1.5rem;
 
