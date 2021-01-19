@@ -27,3 +27,16 @@ section[class="col-12 mx-auto section-outer-wrapper"]
               li
                 = link_to(social.url, target: :_blank) do
                   i[class="#{social.class_name}" alt="#{social.name}"]
+
+      div[class="row career-wrapper"]
+        div[class="col-12"]
+          div[class="row header"]
+            div[class="col-12"]
+              |Career Details
+          div[class="row details"]
+            div[class="col-12"]
+              ul
+                - data.components.career.sort_by { |k| k["id"] }.each_with_index do |item, index|
+                  li
+                    = link_to(item.url, target: :_blank) do
+                      = item.name

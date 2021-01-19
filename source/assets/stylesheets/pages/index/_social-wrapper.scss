@@ -3,9 +3,14 @@
   text-align: center;
   font-size: 3rem;
 
+  a {
+    color: $color-one;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   li {

@@ -13,21 +13,12 @@
   .section-inner-wrapper {
     @include box-shadow-all-sides();
 
-    background-color: rgba(0, 0, 0, $backdrop-opacity-medium-light);
+    background-color: rgba(0, 0, 0, $backdrop-opacity-light);
     max-width: map-get($grid-breakpoints, "maximum");
     padding: 1.5rem;
 
-    @include media-breakpoint-up(xs) {
-      border-top: 2px solid $color-four;
-      border-bottom: 2px solid $color-four;
-    }
-
-    @include media-breakpoint-up(sm) {
-      border-right: 2px solid $color-four;
-      border-left: 2px solid $color-four;
-    }
-
     @import "pages/index/bio-wrapper";
     @import "pages/index/social-wrapper";
+    @import "pages/index/career-wrapper";
   }
 }

@@ -53,7 +53,19 @@ social:
     url: https://www.linkedin.com/in/chrishough
     class_name: fab fa-linkedin
 
-interweb:
-  resume: https://github.com/chrishough/my-resume
-  configurations: https://github.com/chrishough/my-configurations
-  website: http://aboutchrishough.com/
+career:
+  -
+    id: 1
+    name: resume
+    url: https://github.com/chrishough/my-resume
+    class_name:
+  -
+    id: 2
+    name: biographical website
+    url: http://aboutchrishough.com/
+    class_name:
+  -
+    id: 3
+    name: local configurations
+    url: https://github.com/chrishough/my-configurations
+    class_name:
