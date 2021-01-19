@@ -58,14 +58,17 @@ career:
     id: 1
     name: resume
     url: https://github.com/chrishough/my-resume
-    class_name:
   -
     id: 2
     name: biographical website
     url: http://aboutchrishough.com/
-    class_name:
   -
     id: 3
     name: local configurations
     url: https://github.com/chrishough/my-configurations
-    class_name:
+
+hustle:
+  -
+    id: 1
+    name: RobotsBuildingRobots, LLC
+    url: https://robotsbuildingrobots.com/

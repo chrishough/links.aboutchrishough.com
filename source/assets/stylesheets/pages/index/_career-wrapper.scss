@@ -10,18 +10,23 @@
     @include impact-font();
   }
 
-  .details {
+  .career-details,
+  .hustle-details {
     ul {
       list-style-type: none;
       padding: 0;
     }
 
     li {
-      text-transform: capitalize;
-
       &:not(:last-child) {
         padding-bottom: 0.5rem;
       }
+    }
+  }
+
+  .career-details {
+    li {
+      text-transform: capitalize;
     }
   }
 

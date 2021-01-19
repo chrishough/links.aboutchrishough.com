@@ -5,8 +5,15 @@
   .avatar-wrapper {
     img {
       border-radius: 50%;
-      max-height: 125px;
       border: 2px solid $highlight-color;
+
+      @include media-breakpoint-up(xs) {
+        max-height: 125px;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-height: 150px;
+      }
     }
   }
 

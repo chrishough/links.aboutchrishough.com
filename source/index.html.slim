@@ -29,14 +29,26 @@ section[class="col-12 mx-auto section-outer-wrapper"]
                   i[class="#{social.class_name}" alt="#{social.name}"]
 
       div[class="row career-wrapper"]
-        div[class="col-12"]
+        div[class="col-12 col-md-5"]
           div[class="row header"]
             div[class="col-12"]
               |Career Details
-          div[class="row details"]
+          div[class="row career-details"]
             div[class="col-12"]
               ul
                 - data.components.career.sort_by { |k| k["id"] }.each_with_index do |item, index|
+                  li
+                    = link_to(item.url, target: :_blank) do
+                      = item.name
+
+        div[class="col-12 col-md-7"]
+          div[class="row header"]
+            div[class="col-12"]
+              |Side Hustle
+          div[class="row hustle-details"]
+            div[class="col-12"]
+              ul
+                - data.components.hustle.sort_by { |k| k["id"] }.each_with_index do |item, index|
                   li
                     = link_to(item.url, target: :_blank) do
                       = item.name
