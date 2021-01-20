@@ -10,6 +10,12 @@
     @include impact-font();
   }
 
+  .career-details {
+    li {
+      text-transform: capitalize;
+    }
+  }
+
   .career-details,
   .hustle-details {
     ul {
@@ -21,12 +27,6 @@
       &:not(:last-child) {
         padding-bottom: 0.5rem;
       }
-    }
-  }
-
-  .career-details {
-    li {
-      text-transform: capitalize;
     }
   }
 

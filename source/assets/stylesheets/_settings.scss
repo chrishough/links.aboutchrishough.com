@@ -2,13 +2,14 @@ $image-path: '../../assets/images/';
 
 $color-white: #fff;
 $color-black: #000;
-$color-one: #DE354C;
+$color-one: #de354c;
 $color-two: #932432;
-$color-three: #F3F3F3;
-$color-four: #3C1874;
+$color-three: #f3f3f3;
+$color-four: #3c1874;
 $color-five: #283747;
 
 @mixin font-color { color: $color-three; }
+
 @mixin font-highlight-color { color: $highlight-color; }
 
 $highlight-color: $color-one;
