@@ -1,0 +1,34 @@
+$image-path: '../../assets/images/';
+
+$color-white: #fff;
+$color-black: #000;
+$color-one: #de354c;
+$color-two: #932432;
+$color-three: #f3f3f3;
+$color-four: #3c1874;
+$color-five: #283747;
+
+@mixin font-color { color: $color-three; }
+
+@mixin font-highlight-color { color: $highlight-color; }
+
+$highlight-color: $color-one;
+$link-color: $color-one;
+
+$backdrop-opacity: 0.8;
+$backdrop-opacity-dark: 0.9;
+$backdrop-opacity-light: 0.7;
+$backdrop-opacity-medium-light: 0.5;
+$backdrop-opacity-super-light: 0.2;
+
+$grid-breakpoints: (
+  xs: 0,
+  minimium: 375px,
+  maximum: 500px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$zindex-cover: 10000 !default;

@@ -1,0 +1,55 @@
+.bio-wrapper {
+  display: flex;
+  text-align: center;
+
+  .avatar-wrapper {
+    img {
+      border-radius: 50%;
+      border: 2px solid $highlight-color;
+
+      @include media-breakpoint-up(xs) {
+        max-height: 125px;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-height: 150px;
+      }
+    }
+  }
+
+  .name-locations-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2rem;
+
+    .name {
+      font-weight: bold;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      text-decoration: overline;
+      text-decoration-color: $color-one;
+
+      @include impact-font();
+    }
+
+    .locations {
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .slogan-wrapper {
+    padding-top: 1rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
