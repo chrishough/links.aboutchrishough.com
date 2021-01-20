@@ -7,9 +7,9 @@ import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons/faInstagra
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons/faGithubSquare';
 
 library.add(faTwitterSquare,
-            faLinkedin,
-            faFacebookSquare,
-            faInstagramSquare,
-            faGithubSquare);
+  faLinkedin,
+  faFacebookSquare,
+  faInstagramSquare,
+  faGithubSquare);
 
 dom.watch();
