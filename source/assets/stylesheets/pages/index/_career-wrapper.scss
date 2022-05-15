@@ -4,7 +4,9 @@
     font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: overline;
+    /* stylelint-disable */
     text-decoration-thickness: 0.25rem;
+    /* stylelint-enable */
     text-decoration-color: $highlight-color;
     padding-top: 0.5rem;
 

@@ -31,7 +31,9 @@
       text-transform: uppercase;
       text-decoration: overline;
       text-decoration-color: $highlight-color;
+      /* stylelint-disable */
       text-decoration-thickness: 0.25rem;
+      /* stylelint-enable */
 
       @include impact-font();
     }
