@@ -4,7 +4,11 @@
   font-size: 3rem;
 
   a {
-    color: $color-one;
+    color: $link-color;
+
+    svg {
+      @include box-shadow-all-sides();
+    }
   }
 
   ul {
