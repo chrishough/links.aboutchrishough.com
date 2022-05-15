@@ -3,7 +3,7 @@
     display: flex;
     background: url('#{$image-path}/pages/background.jpg') no-repeat;
     background-size: cover;
-    background-position: right center;
+    background-position: center center;
     height: 100vh;
     padding: 0;
 
@@ -40,6 +40,7 @@
     @include media-breakpoint-up(md) {
       @include box-shadow-all-sides();
 
+      border-radius: 1rem;
       background-color: rgba(0, 0, 0, $backdrop-opacity-light);
     }
 

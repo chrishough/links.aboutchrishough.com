@@ -4,7 +4,10 @@
     font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: overline;
-    text-decoration-color: $color-one;
+    /* stylelint-disable */
+    text-decoration-thickness: 0.25rem;
+    /* stylelint-enable */
+    text-decoration-color: $highlight-color;
     padding-top: 0.5rem;
 
     @include impact-font();
@@ -31,6 +34,7 @@
   }
 
   a {
-    color: $color-one;
+    color: $link-color;
+    text-shadow: 1px 1px $color-black;
   }
 }
