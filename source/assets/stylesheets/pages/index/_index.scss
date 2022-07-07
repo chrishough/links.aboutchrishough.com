@@ -35,6 +35,7 @@
     @include media-breakpoint-up(xs) {
       background-color: initial;
       box-shadow: initial;
+      max-width: map-get($grid-breakpoints, "minimium");
     }
 
     @include media-breakpoint-up(md) {
@@ -42,9 +43,9 @@
 
       border-radius: 1rem;
       background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+      max-width: map-get($grid-breakpoints, "maximum");
     }
 
-    max-width: map-get($grid-breakpoints, "maximum");
     padding: 1.5rem;
 
     @import "pages/index/bio-wrapper";
