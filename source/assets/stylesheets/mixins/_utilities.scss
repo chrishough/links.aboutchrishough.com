@@ -20,7 +20,7 @@
   filter: drop-shadow($horiz $vert $spread $color);
 }
 
-@mixin box-shadow-all-sides ($color: $color-black) {
+@mixin box-shadow-all-sides ($color: $color-five) {
 	@include box-shadow($color: $color);
 }
 

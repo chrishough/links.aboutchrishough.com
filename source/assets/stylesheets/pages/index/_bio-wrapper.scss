@@ -5,9 +5,9 @@
   .avatar-wrapper {
     img {
       border-radius: 50%;
-      border: 2px solid $highlight-color;
+      border: 2px solid $avatar-wrapper-highlight--border-color;
 
-      @include box-shadow-all-sides($color: $color-two);
+      @include box-shadow-all-sides($avatar-wrapper-highlight-fade-color);
 
       @include media-breakpoint-up(xs) {
         max-height: 125px;
@@ -30,7 +30,7 @@
       font-size: 1.75rem;
       text-transform: uppercase;
       text-decoration: overline;
-      text-decoration-color: $highlight-color;
+      text-decoration-color: $name-top-border-color;
       /* stylelint-disable */
       text-decoration-thickness: 0.25rem;
       /* stylelint-enable */

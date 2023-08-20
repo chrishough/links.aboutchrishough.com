@@ -2,16 +2,24 @@ $image-path: '../../assets/images/';
 
 $color-white: #fff;
 $color-black: #000;
-$color-one: #d90629;
-$color-two: #f85d00;
-$color-three: #ffb563;
-$color-four: #ffd29d;
-$color-five: #928351;
+$color-one: #A6038B;
+$color-two: #D904CB;
+$color-three: #0487D9;
+$color-four: #05C7F2;
+$color-five: #05F2F2;
 
 @mixin font-color { color: $color-white; }
 
-$highlight-color: orangered;
-$link-color: orangered;
+$avatar-wrapper-highlight--border-color: $color-one;
+$avatar-wrapper-highlight-fade-color: $color-two;
+
+$name-top-border-color: $color-two;
+$category-top-border-color: $color-two;
+
+$bio-link-color: $color-five;
+$social-link-color: $color-four;
+
+$four-o-four-highlight-color: $color-one;
 
 $backdrop-opacity: 0.8;
 $backdrop-opacity-dark: 0.9;
