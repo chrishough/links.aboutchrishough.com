@@ -5,15 +5,21 @@
     padding: 0;
     align-items: center;
     justify-content: center;
+    background: url('#{$image-path}/pages/20230817-mobile.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   section {
     max-width: map-get($grid-breakpoints, "maximum");
 
     .four-o-four-wrapper {
+      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
       display: flex;
       justify-content: center;
-      padding-bottom: 5rem;
+      padding: 5rem 1rem;
+      border-top: 4px solid $four-o-four-border-color;
+      border-bottom: 4px solid $four-o-four-border-color;
     }
   }
 
@@ -21,8 +27,6 @@
     font-weight: bold;
     font-size: 7.75rem;
     text-transform: uppercase;
-    text-decoration: overline;
-    text-decoration-color: $four-o-four-highlight-color;
     text-align: center;
 
     @include impact-font();
@@ -34,7 +38,8 @@
     font-size: 3rem;
 
     a {
-      color: $link-color;
+      color: $four-o-four-link-color;
+      text-decoration: none;
     }
   }
 }
