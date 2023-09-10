@@ -27,14 +27,13 @@
 
     .name {
       font-weight: bold;
-      font-size: 1.75rem;
+      font-size: $impact-category-name-font-size;
       text-transform: uppercase;
       text-decoration: overline;
       text-decoration-color: $name-top-border-color;
       /* stylelint-disable */
       text-decoration-thickness: 0.25rem;
       /* stylelint-enable */
-
       @include impact-font();
     }
 

@@ -1,7 +1,7 @@
 #index {
   main {
     display: flex;
-    background: url('#{$image-path}/pages/20230817-mobile.jpg') no-repeat;
+    background: url('#{$image-path}/pages/backgrounds/20230817.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -20,7 +20,7 @@
 
   .section-outer-wrapper {
     @include media-breakpoint-up(xs) {
-      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+      background-color: rgba(red($background-color-fade-color), green($background-color-fade-color), blue($background-color-fade-color), $backdrop-opacity);
       padding-top: 1rem;
     }
 
@@ -42,7 +42,7 @@
       @include box-shadow-all-sides();
 
       border-radius: 1rem;
-      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+      background-color: rgba(red($background-color-fade-color), green($background-color-fade-color), blue($background-color-fade-color), $backdrop-opacity);
       max-width: map-get($grid-breakpoints, "maximum");
     }
 

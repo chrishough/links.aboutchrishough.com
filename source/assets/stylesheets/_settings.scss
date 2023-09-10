@@ -1,23 +1,49 @@
-$image-path: '../../assets/images/';
+$image-path: "../../assets/images/";
 
 $color-white: #fff;
 $color-black: #000;
-$color-one: #A6038B;
-$color-two: #D904CB;
-$color-three: #0487D9;
-$color-four: #05C7F2;
-$color-five: #05F2F2;
+$color-one: #BF2642;
+$color-two: #D90404;
+$color-three: #A60303;
+$color-four: #590202;
+$color-five: #0D0D0D;
 
-@mixin font-color { color: $color-white; }
 
-$avatar-wrapper-highlight--border-color: $color-one;
-$avatar-wrapper-highlight-fade-color: $color-two;
+$color-primary: #D90404;
+$color-secondary: #A60303;
+$color-fade: #0D0D0D;
 
-$name-top-border-color: $color-two;
-$category-top-border-color: $color-two;
+// SITE COLORS ---------------------------------------------------------
 
-$bio-link-color: $color-five;
-$social-link-color: $color-four;
+$avatar-wrapper-highlight--border-color: $color-secondary;
+$avatar-wrapper-highlight-fade-color: $color-primary;
+
+$name-top-border-color: $color-primary;
+$category-top-border-color: $color-primary;
+
+$bio-link-color: $color-primary;
+$social-link-color: $color-primary;
+
+$background-color-fade-color: $color-fade;
+
+// SITE FONTS ----------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Teko:wght@700&display=swap');
+
+@mixin default-font-color { color: $color-white; }
+
+@mixin default-font-family { font-family: "Helvetica Neue,Helvetica,Arial,sans-serif;", serif }
+
+@mixin impact-font { font-family: 'Teko', sans-serif; }
+
+$default-font-size: 1.1rem;
+
+$impact-header-name-font-size: 2rem;
+$impact-category-name-font-size: 1.75rem;
+
+$social-link-font-size: 2rem;
+
+
+
 
 $four-o-four-link-color: $color-five;
 $four-o-four-border-color: $color-two;
