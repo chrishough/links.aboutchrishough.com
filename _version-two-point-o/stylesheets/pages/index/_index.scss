@@ -7,6 +7,11 @@
     height: 100vh;
     padding: 0;
 
+    background: url('#{$image-path}/pages/backgrounds/20230817.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+
     @include media-breakpoint-up(xs) {
       align-items: initial;
       justify-content: initial;
@@ -20,7 +25,6 @@
 
   .section-outer-wrapper {
     @include media-breakpoint-up(xs) {
-      background-color: rgba(red($background-color-fade-color), green($background-color-fade-color), blue($background-color-fade-color), $backdrop-opacity);
       padding-top: 1rem;
     }
 
@@ -35,7 +39,6 @@
     @include media-breakpoint-up(xs) {
       background-color: initial;
       box-shadow: initial;
-      max-width: map-get($grid-breakpoints, "minimium");
     }
 
     @include media-breakpoint-up(md) {

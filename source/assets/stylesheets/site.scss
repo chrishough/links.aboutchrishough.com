@@ -1,9 +1,13 @@
 @charset "utf-8";
-
+// Libraries
 @import "~normalize-scss/sass/normalize/import-now";
-@import "settings";
+// Variables used for libraries and local css
+@import "components/site-variables";
+// Import Bootstrap
 @import "vendor/bootstrap";
+// Utilities
 @import "mixins/*";
+// Site Components
 @import "components/html-body";
-@import "pages/index/index";
-@import "pages/four-o-four/index";
+// Pages
+@import "index";

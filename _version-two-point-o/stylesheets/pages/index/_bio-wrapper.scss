@@ -1,0 +1,75 @@
+.bio-wrapper {
+  display: flex;
+  text-align: center;
+
+  .avatar-wrapper {
+    padding: 2rem 0;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid $avatar-wrapper-highlight--border-color;
+
+      @include box-shadow-all-sides($avatar-wrapper-highlight-fade-color);
+
+      @include media-breakpoint-up(xs) {
+        max-height: 250px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+  @include media-breakpoint-up(xs) {
+
+  }
+
+
+  .name-locations-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2rem;
+
+    .name {
+      font-weight: bold;
+      font-size: $impact-category-name-font-size;
+      text-transform: uppercase;
+      text-decoration: overline;
+      text-decoration-color: $name-top-border-color;
+      /* stylelint-disable */
+      text-decoration-thickness: 0.25rem;
+      /* stylelint-enable */
+
+    }
+
+    .locations {
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .slogan-wrapper {
+    text-align: left;
+    font-size: 1rem;
+
+    @include media-breakpoint-up(xs) {
+      padding-top: 1rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 1.5rem;
+    }
+  }
+}

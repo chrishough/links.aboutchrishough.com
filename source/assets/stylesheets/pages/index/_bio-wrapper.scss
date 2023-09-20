@@ -1,66 +1,33 @@
-.bio-wrapper {
-  display: flex;
-  text-align: center;
-
-  .avatar-wrapper {
-    img {
-      border-radius: 50%;
-      border: 2px solid $avatar-wrapper-highlight--border-color;
-
-      @include box-shadow-all-sides($avatar-wrapper-highlight-fade-color);
-
-      @include media-breakpoint-up(xs) {
-        max-height: 125px;
-      }
-
-      @include media-breakpoint-up(md) {
-        max-height: 150px;
-      }
-    }
+@include media-breakpoint-up(xs) {
+  .section-outer-wrapper {
+    background: url('#{$image-path}/pages/backgrounds/avatar/20230919.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 0;
   }
+}
 
-  .name-locations-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 2rem;
+.name-wrapper {
 
-    .name {
-      font-weight: bold;
-      font-size: $impact-category-name-font-size;
-      text-transform: uppercase;
-      text-decoration: overline;
-      text-decoration-color: $name-top-border-color;
-      /* stylelint-disable */
-      text-decoration-thickness: 0.25rem;
-      /* stylelint-enable */
-      @include impact-font();
-    }
+  .name {
+    position: absolute;
+    top: 35vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 
-    .locations {
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
+    background-color: rgba(red($background-color-fade), green($background-color-fade), blue($background-color-fade), $backdrop-opacity);
 
-      li {
-        text-align: left;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-      }
-    }
-  }
+    font-weight: bold;
+    font-size: $name-font-size;
+    text-transform: uppercase;
+    text-align: center;
+    ine-height: 1;
+    @include impact-font();
 
-  .slogan-wrapper {
-    text-align: left;
-    font-size: 1rem;
-
-    @include media-breakpoint-up(xs) {
-      padding-top: 1rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-top: 1.5rem;
-    }
+    padding: 0.5rem 0 0 0;
   }
 }

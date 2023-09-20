@@ -11,7 +11,7 @@ body {
   min-width: map-get($grid-breakpoints, 'minimium') !important;
   min-height: 100% !important;
   background-color: $color-black;
-  font-size: $default-font-size;
+  font-size: 1$default-font-size;
 
   @include default-font-color();
   @include default-font-family();
