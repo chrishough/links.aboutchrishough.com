@@ -1,33 +1,46 @@
 @include media-breakpoint-up(xs) {
-  .section-outer-wrapper {
-    background: url('#{$image-path}/pages/backgrounds/avatar/20230919.jpg') no-repeat;
+  .section-bio-wrapper {
+    background: url('#{$image-path}/pages/backgrounds/avatar/20231124.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
-    height: 100vh;
-    padding: 0;
+
+    @include set-gutters(0);
   }
-}
 
-.name-wrapper {
+  .name-wrapper {
+    .name {
+      position: absolute;
+      top: 35vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
 
-  .name {
-    position: absolute;
-    top: 35vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
+      font-weight: bold;
+      font-size: $bio-name-font-size;
+      color: $bio-name-font-color;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 50px;
 
-    background-color: rgba(red($background-color-fade), green($background-color-fade), blue($background-color-fade), $backdrop-opacity);
+      @include impact-font-family();
+      @include set-box-shadow-all-sides();
 
-    font-weight: bold;
-    font-size: $name-font-size;
-    text-transform: uppercase;
-    text-align: center;
-    ine-height: 1;
-    @include impact-font();
+      padding: 0.5rem 0;
 
-    padding: 0.5rem 0 0 0;
+      .name-details {
+        padding-top: 0.5rem;
+      }
+
+      .name-icon {
+        img {
+          padding: 0 0.5rem;
+
+          @include media-breakpoint-up(xs) {
+            max-height: 50px;
+          }
+        }
+      }
+    }
   }
 }

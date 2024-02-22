@@ -13,6 +13,5 @@ body {
   background-color: $color-black;
   font-size: $default-font-size;
 
-  @include default-font-color();
-  @include default-font-family();
+  @include impact-font-family();
 }

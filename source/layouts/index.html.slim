@@ -3,6 +3,7 @@
   = partial "partials/components/body" do
 
     main[class="container-fluid"]
-      == yield
+      div[class="row section-outside-wrapper"]
+        == yield
 
     = partial "partials/components/javascript"

@@ -5,15 +5,7 @@
   .avatar-wrapper {
     padding: 2rem 0;
 
-    img {
-      border-radius: 50%;
-      border: 2px solid $avatar-wrapper-highlight--border-color;
 
-      @include box-shadow-all-sides($avatar-wrapper-highlight-fade-color);
-
-      @include media-breakpoint-up(xs) {
-        max-height: 250px;
-      }
     }
   }
 

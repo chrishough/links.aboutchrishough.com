@@ -14,12 +14,17 @@ $color-fade: #0D0D0D;
 
 // MINE ---------------------------------------------------------
 
+$default-font-size: 1.1rem;
+$default-font-color: $color-black;
+
 $background-color-body: $color-black;
 $background-color-fade: $color-fade;
+$background-color-slogan: $color-white;
 
-$name-font-size: 3.5rem;
+$bio-name-font-size: 3rem;
+$bio-name-font-color: $color-white;
 
-$backdrop-opacity: 0.8;
+$backdrop-opacity-default: 0.8;
 $backdrop-opacity-dark: 0.9;
 $backdrop-opacity-light: 0.7;
 $backdrop-opacity-medium-light: 0.5;
@@ -38,10 +43,29 @@ $grid-breakpoints: (
 
 $zindex-cover: 10000 !default;
 
+// SITE FONTS ----------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Teko:wght@700&display=swap');
+
+@mixin impact-font-family { font-family: 'Teko', sans-serif; }
+
+@mixin default-font { font-family: "Helvetica Neue,Helvetica,Arial,sans-serif;", serif }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// PREVIOUS VERSION TBD ------------------------------------------------
 
 
 $avatar-wrapper-highlight--border-color: $color-secondary;
@@ -54,17 +78,12 @@ $bio-link-color: $color-primary;
 $social-link-color: $color-primary;
 
 
-
-// SITE FONTS ----------------------------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Teko:wght@700&display=swap');
-
 @mixin default-font-color { color: $color-white; }
 
-@mixin default-font-family { font-family: "Helvetica Neue,Helvetica,Arial,sans-serif;", serif }
 
-@mixin impact-font { font-family: 'Teko', sans-serif; }
 
-$default-font-size: 1.1rem;
+
+
 
 
 $impact-category-name-font-size: 2rem;

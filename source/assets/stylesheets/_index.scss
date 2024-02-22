@@ -1,8 +1,10 @@
 #index {
   main {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $background-color-body;
+    color: $default-font-color;
+    font-size: $default-font-size;
     padding: 0;
 
     @include media-breakpoint-up(xs) {
@@ -11,5 +13,19 @@
     }
   }
 
+  .section-outside-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .section-inside-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+
   @import "pages/index/bio-wrapper";
+  @import "pages/index/slogan-wrapper";
 }
