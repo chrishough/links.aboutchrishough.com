@@ -1,11 +1,16 @@
 #index {
   main {
     display: flex;
-    background: url('#{$image-path}/pages/background.jpg') no-repeat;
+    background: url('#{$image-path}/pages/backgrounds/20230817.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     height: 100vh;
     padding: 0;
+
+    background: url('#{$image-path}/pages/backgrounds/20230817.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
 
     @include media-breakpoint-up(xs) {
       align-items: initial;
@@ -20,7 +25,6 @@
 
   .section-outer-wrapper {
     @include media-breakpoint-up(xs) {
-      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
       padding-top: 1rem;
     }
 
@@ -35,14 +39,13 @@
     @include media-breakpoint-up(xs) {
       background-color: initial;
       box-shadow: initial;
-      max-width: map-get($grid-breakpoints, "minimium");
     }
 
     @include media-breakpoint-up(md) {
       @include box-shadow-all-sides();
 
       border-radius: 1rem;
-      background-color: rgba(0, 0, 0, $backdrop-opacity-light);
+      background-color: rgba(red($background-color-fade-color), green($background-color-fade-color), blue($background-color-fade-color), $backdrop-opacity);
       max-width: map-get($grid-breakpoints, "maximum");
     }
 

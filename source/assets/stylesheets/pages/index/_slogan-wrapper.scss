@@ -1,0 +1,15 @@
+@include media-breakpoint-up(xs) {
+  .section-slogan-wrapper {
+    background-color: $background-color-slogan;
+
+    @include set-gutters(0);
+  }
+
+  .slogan-wrapper {
+    padding: 1rem;
+
+    .slogan {
+
+    }
+  }
+}
