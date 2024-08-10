@@ -13,4 +13,4 @@ set :port, 80
 
 require_relative '../lib/build'
 
-after_build { adjust_final_source }
+# after_build { adjust_final_source }
