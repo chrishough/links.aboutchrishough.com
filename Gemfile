@@ -11,13 +11,14 @@ gem 'highline'
 gem 'require_all'
 
 gem 'builder'
-gem 'middleman', '~> 4'
+gem 'middleman', '~> 4.5', '>= 4.5.1'
 gem 'middleman-minify-html'
 gem 'redcarpet'
 
-gem 'slim'
+# Unfortunately Middleman v4 incompatible with slim v5
+# https://stackoverflow.com/a/77356029/161869
+gem 'slim', '~>4.0'
 gem 'titleize'
-gem 'stringex'
 
 group :development do
   gem 'pry'
