@@ -45,6 +45,9 @@ jobs:
       - name: Yarn Version
         run: |
           yarn --version
+      - name: Install Dependencies
+        run: |
+          yarn install
 
       # ----------------------------------------------------Webpack
 
