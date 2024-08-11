@@ -30,12 +30,12 @@ jobs:
         run: |
           bundle exec rake -T
 
-      # ----------------------------------------------------Node
+      # ----------------------------------------------------Javascript
 
       - name: Install Node
-        uses: dcodeIO/setup-node-nvm@master
+        uses: actions/setup-node@v4
         with:
-          version: 22.6.0
+          node-version: 22.6.0
       - name: Node Version
         run: |
           node --version
