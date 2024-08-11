@@ -33,12 +33,15 @@ jobs:
       # ----------------------------------------------------Node
 
       - name: Install Node
-        uses: actions/setup-node@v1
+        uses: dcodeIO/setup-node-nvm@master
         with:
-          version: 10.16.3
+          version: 22.6.0
       - name: Node Version
         run: |
           node --version
+      - name: NVM Version
+        run: |
+          nvm --version
       - name: Install Yarn
         run: |
           npm install --global yarn
