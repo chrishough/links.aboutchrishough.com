@@ -39,9 +39,6 @@ jobs:
       - name: Node Version
         run: |
           node --version
-      - name: NVM Version
-        run: |
-          nvm --version
       - name: Install Yarn
         run: |
           npm install --global yarn
