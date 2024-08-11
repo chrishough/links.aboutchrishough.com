@@ -51,7 +51,7 @@ class ProcessWebpackConfigurations
   end
 
   def write_out_configuration
-    File.open('webpack.config.js', 'w') { |file| file.write(global_webpack_config_js) }
+    File.write('webpack.config.js', global_webpack_config_js)
   end
 
   def development?

@@ -2,10 +2,20 @@
 # TODO - FIX COP
 # rubocop:enable all
 
+inherit_from:
+  - .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
+
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.3.4
   DisplayStyleGuide: false
+  NewCops: enable
   Exclude:
+    - '___v3_construction_site__/**/*'
     - 'backup/**/*'
     - 'build/**/*'
     - 'vendor/**/*'
@@ -21,8 +31,7 @@ AllCops:
     - 'tmp.rb'
     - 'scratch.rb'
 
-# Disable documentation cops
-Documentation:
+Style/Documentation:
   Enabled: false
 
 Layout/MultilineOperationIndentation:
@@ -34,7 +43,7 @@ Metrics/ClassLength:
 Metrics/MethodLength:
   Max: 16
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 180
   Exclude:
     - 'lib/tasks/*'

@@ -20,9 +20,19 @@ gem 'redcarpet'
 gem 'slim', '~>4.0'
 gem 'titleize'
 
+# Fixes warnings you're seeing indicate that certain Ruby standard
+# library gems (bigdecimal and mutex_m) are used by activesupport
+# but will not be included as default gems in future Ruby versions
+# (starting from Ruby 3.4.0).
+gem 'bigdecimal'
+gem 'mutex_m'
+gem 'csv'
+
 group :development do
   gem 'pry'
   gem 'pry-nav'
   gem 'rubocop'
-  gem 'rb-readline'
+  gem 'rubocop-performance', '~> 1.21.0'
+  gem 'rubocop-rake', '~> 0.6.0'
+  gem 'rubocop-rspec', '~> 3.0.0'
 end

@@ -5,7 +5,7 @@ require 'titleize'
 module StringHelpers
   def format_constant_name(str)
     str = str.split('-').map(&:capitalize).join
-    str[0].downcase + str[1..-1]
+    str[0].downcase + str[1..]
   end
 
   def format_slug(str)

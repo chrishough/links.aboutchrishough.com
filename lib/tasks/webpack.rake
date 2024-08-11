@@ -24,6 +24,6 @@ namespace :webpack do
     puts("---------------------------------------------------------->>\n")
     puts('Removing Generated Webpack File')
     puts("---------------------------------------------------------->>\n")
-    File.delete('webpack.config.js') if File.exist?('webpack.config.js')
+    FileUtils.rm_f('webpack.config.js')
   end
 end

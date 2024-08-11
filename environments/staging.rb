@@ -5,7 +5,7 @@ activate :external_pipeline,
          command: 'npm run staging',
          source: 'build'
 
-Slim::Engine.set_default_options(pretty: true)
+Slim::Engine.set_options(pretty: true)
 
 set :protocol, 'https://'
 set :host, 'links.aboutchrishough.com'
@@ -13,4 +13,4 @@ set :port, 80
 
 require_relative '../lib/build'
 
-# after_build { adjust_final_source }
+after_build { adjust_final_source }
