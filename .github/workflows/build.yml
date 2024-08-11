@@ -39,9 +39,12 @@ jobs:
       - name: Node Version
         run: |
           node --version
-      - name: Setup Node Dependencies
+      - name: Install Yarn
         run: |
-          npm install
+          npm install --global yarn
+      - name: Yarn Version
+        run: |
+          yarn --version
 
       # ----------------------------------------------------Webpack
 
