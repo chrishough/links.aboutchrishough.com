@@ -7,33 +7,25 @@ namespace :server do
     puts('Cranking up the development server running on port 4567')
     puts('Open your browser to http://localhost:4567/')
     puts("---------------------------------------------------------->>\n")
-
-    log = verbose == true ? "> tmp/development.log 2>&1" : "" rescue ""
-
-    system("bundle exec middleman server -e development --verbose #{log}")
+    system('bundle exec middleman server -e development --verbose')
   end
 
   namespace :build do
-    desc 'Build the site for local staging testing'
-    task staging: ['utilities:build:purge:all', 'webpack:build:staging'] do
+    desc 'Build the site for local testing'
+    task staging: ['utilities:build:purge:all'] do
+      ProcessWebpackConfigurations.new(mode: 'development').run
       puts("---------------------------------------------------------->>\n")
-      puts('Building static files, but I will not be starting the staging server')
+      puts('Building static files, but I will not be starting the server')
       puts("---------------------------------------------------------->>\n")
-
-      log = verbose == true ? "> tmp/staging.log 2>&1" : "" rescue ""
-
-      system("time bundle exec middleman server -e staging --verbose #{log}")
+      system('time bundle exec middleman build -e staging --verbose')
     end
 
-    desc 'Build the site for production testing '
+    desc 'Build the site for production'
     task production: ['utilities:build:purge:all', 'webpack:build:production'] do
       puts("---------------------------------------------------------->>\n")
-      puts('Building static files, but I will not be starting the production server')
+      puts('Building static files, but I will not be starting the server')
       puts("---------------------------------------------------------->>\n")
-
-      log = verbose == true ? "> tmp/production.log 2>&1" : "" rescue ""
-
-      system("time bundle exec middleman server -e production --verbose #{log}")
+      system('time bundle exec middleman build -e production --verbose')
     end
   end
 end
