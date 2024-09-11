@@ -3,10 +3,11 @@
     "develop": "clear && printf '\\e[3J' && NODE_ENV=development webpack --progress --color --devtool source-map",
     "staging": "clear && printf '\\e[3J' && NODE_ENV=development webpack",
     "production": "clear && printf '\\e[3J' && NODE_ENV=production webpack --bail -p",
-    "lintjs_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
-    "lintcss_with_fix": "stylelint 'source/**/*.scss' --syntax scss --fix; exit 0;",
-    "lintjs": "eslint 'source/assets/javascripts/**/*.js'",
-    "lintcss": "stylelint 'source/**/*.scss' --syntax scss"
+    "lint:js_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
+    "lint:css_with_fix": "stylelint 'source/**/*.scss' --syntax scss --fix; exit 0;",
+    "lint:js": "eslint 'source/assets/javascripts/**/*.js'",
+    "lint:css": "stylelint 'source/**/*.scss' --syntax scss",
+    "test:webpack": "webpack --config webpack.config.js"
   },
   "browserslist": [
     "Last 3 versions"
@@ -26,9 +27,11 @@
     "npm": "^6.14.8",
     "popper.js": "^1.16.1",
     "sass": "^1.78.0",
-    "stylelint-webpack-plugin": "^0.10.5"
+    "stylelint-webpack-plugin": "^0.10.5",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^8.1.0",
@@ -45,7 +48,8 @@
     "html-loader": "^0.5.5",
     "import-glob-loader": "^1.1.0",
     "jquery-validation": "^1.19.2",
-    "postcss-loader": "^3.0.0",
+    "postcss": "^8.4.45",
+    "postcss-loader": "^8.1.1",
     "precss": "^4.0.0",
     "resolve-url-loader": "^3.1.1",
     "sass-loader": "^7.3.1",
@@ -56,9 +60,9 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.18.0",
-    "uglifyjs-webpack-plugin": "1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^1.1.2",
-    "webpack": "^3.12.0",
-    "webpack-manifest-plugin": "^2.2.0"
+    "webpack": "^5.94.0",
+    "webpack-manifest-plugin": "^5.0.0"
   }
 }

@@ -12,6 +12,7 @@ module WebpackAssets
 
   def _asset(variable, rev_manifest_name)
     asset = _rev_manifest(rev_manifest_name)[variable]
+
     raise "Can't find #{variable} in webpack assets. See #{rev_manifest_name}-manifest.json for complete list." unless asset
 
     asset

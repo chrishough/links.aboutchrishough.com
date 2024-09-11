@@ -16,7 +16,7 @@ class WebpackBuild
   end
 
   def run
-    _substitute_plugins
+    # _substitute_plugins
     _write_out_configuration
   end
 
