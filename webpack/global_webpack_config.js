@@ -2,10 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const outputPath = path.join(__dirname, 'build/assets');
 
-module.exports = {
+{{insert-webpack-plugins}}
+
+const siteConfig = {
   entry: {
     vendor: [
       path.join(__dirname, '/source/assets/javascripts/vendor.js'),
@@ -27,7 +29,6 @@ module.exports = {
       'source/assets/javascripts/vendor',
     ],
     alias: {
-      fontawesome: 'fontawesome',
       jquery: 'jquery/src/jquery.js',
       popper: 'popper.js/dist/popper.js',
       bootstrap: 'bootstrap/dist/js/bootstrap.js',
@@ -152,6 +153,8 @@ module.exports = {
         [name]: filePath,
       }), seed),
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(){{insert-webpack-plugin-merges}}
   ],
 };
+
+module.exports = [siteConfig]

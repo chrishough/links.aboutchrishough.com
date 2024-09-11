@@ -10,13 +10,13 @@ class WebpackBuild
 
   def initialize(mode:)
     self.mode = mode
-    self.global_webpack_config_js = File.read('webpack/global.webpack.config.js')
+    self.global_webpack_config_js = File.read('webpack/global_webpack_config.js')
     self.insert_webpack_plugins = ''
     self.insert_webpack_plugin_merges = ''
   end
 
   def run
-    # _substitute_plugins
+    _substitute_plugins
     _write_out_configuration
   end
 
@@ -38,7 +38,7 @@ class WebpackBuild
   def _append_plugins
     Dir.glob('webpack/plugins/*.js') do |file|
       self.insert_webpack_plugins = "#{insert_webpack_plugins}\n#{File.read(file)}"
-      self.insert_webpack_plugin_merges = "#{insert_webpack_plugin_merges},#{file.constant_name}"
+      self.insert_webpack_plugin_merges = "#{insert_webpack_plugin_merges}, #{file.constant_name},"
     end
   end
 

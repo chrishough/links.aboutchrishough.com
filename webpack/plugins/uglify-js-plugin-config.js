@@ -9,7 +9,7 @@ const uglifyJsPluginConfig = new UglifyJsPlugin({
       comments: true,
       beautify: true,
       indent_level: 2,
-      indent_start: 0
-    }
-  }
+      indent_start: 0,
+    },
+  },
 });
