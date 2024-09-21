@@ -2,7 +2,7 @@
   "scripts": {
     "develop": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack --progress --color --devtool source-map",
     "staging": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack",
-    "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail -p",
+    "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail",
     "lint:js_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
     "lint:css_with_fix": "stylelint 'source/**/*.scss' --syntax scss --fix; exit 0;",
     "lint:js": "eslint 'source/assets/javascripts/**/*.js'",
