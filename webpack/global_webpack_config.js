@@ -2,12 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const outputPath = path.join(__dirname, 'build/assets');
 
-{{insert-webpack-plugins}}
+const isProduction = process.env.NODE_ENV === 'production';
 
 const siteConfig = {
+  devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+
   entry: {
     vendor: [
       path.join(__dirname, '/source/assets/javascripts/vendor.js'),
@@ -37,6 +40,25 @@ const siteConfig = {
   },
 
   optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          ecma: 8,
+          parse: {},
+          compress: false,
+          mangle: false,
+          keep_fnames: true,
+          output: {
+            comments: true,
+            beautify: true,
+            indent_level: 2,
+            indent_start: 0,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
     splitChunks: {
       cacheGroups: {
         vendor: {
@@ -152,8 +174,8 @@ const siteConfig = {
         [name]: filePath,
       }), seed),
     }),
-    new CleanWebpackPlugin(){{insert-webpack-plugin-merges}}
+    new CleanWebpackPlugin(),
   ],
 };
 
-module.exports = [siteConfig]
+module.exports = [siteConfig];
