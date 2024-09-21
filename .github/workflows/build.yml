@@ -68,8 +68,8 @@ jobs:
 
       - name: ESLint
         run: |
-          npm run lintjs
+          yarn run lint:js
 
       - name: StyleLint
         run: |
-          npm run lintcss
+          yarn run lint:css
