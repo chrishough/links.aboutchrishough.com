@@ -30,7 +30,7 @@ namespace :server do
         ''
       end
 
-      system("time bundle exec middleman server -e staging --verbose #{log}")
+      system("bundle exec middleman build -e staging --verbose #{log}")
     end
 
     desc 'Build the site for production testing '
@@ -45,7 +45,7 @@ namespace :server do
         ''
       end
 
-      system("time bundle exec middleman server -e production --verbose #{log}")
+      system("bundle exec middleman build -e production --verbose #{log}")
     end
   end
 end

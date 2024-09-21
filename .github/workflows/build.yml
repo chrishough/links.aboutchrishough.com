@@ -7,14 +7,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-
-      # ----------------------------------------------------Ruby
-
+      # ---------------------------------------------------------------
+      # Ruby
+      # ---------------------------------------------------------------
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -29,9 +28,9 @@ jobs:
       - name: Test Ruby Dependencies
         run: |
           bundle exec rake -T
-
-      # ----------------------------------------------------Javascript
-
+      # ---------------------------------------------------------------
+      # Javascript
+      # ---------------------------------------------------------------
       - name: Install Node
         uses: actions/setup-node@v4
         with:
@@ -48,9 +47,9 @@ jobs:
       - name: Install Dependencies
         run: |
           yarn install
-
-      # ----------------------------------------------------Webpack
-
+      # ---------------------------------------------------------------
+      # Webpack
+      # ---------------------------------------------------------------
       - name: Build Webpack File
         run: |
           bundle exec rake webpack:build:production
@@ -59,9 +58,9 @@ jobs:
         run: |
           export TERM=xterm
           bundle exec middleman build -e production --verbose
-
-      # ----------------------------------------------------Quality
-
+      # ---------------------------------------------------------------
+      # Quality
+      # ---------------------------------------------------------------
       - name: Rubocop
         run: |
           bundle exec rubocop

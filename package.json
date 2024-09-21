@@ -10,7 +10,8 @@
     "test:webpack": "yarn webpack --config webpack.config.js"
   },
   "browserslist": [
-    "Last 3 versions"
+    "last 3 versions",
+    "> 1%"
   ],
   "dependencies": {
     "@babel/core": "^7.11.4",
