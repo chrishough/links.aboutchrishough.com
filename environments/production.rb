@@ -2,7 +2,7 @@
 
 activate :external_pipeline,
          name: :webpack,
-         command: 'npm run production',
+         command: 'yarn run production',
          source: 'build'
 
 activate :asset_hash, exts: %w[.jpg .png]

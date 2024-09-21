@@ -6,5 +6,5 @@ Slim::Engine.set_options(pretty: true)
 
 activate :external_pipeline,
          name: :webpack,
-         command: 'npm run develop',
+         command: 'yarn run develop',
          source: 'build'
