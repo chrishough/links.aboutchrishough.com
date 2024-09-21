@@ -43,8 +43,8 @@ class WebpackBuild
   end
 
   def _remove_plugins
-    process_substitution('', '{{insert-webpack-plugins}}')
-    process_substitution('', '{{insert-webpack-plugin-merges}}')
+    _process_substitution('', '{{insert-webpack-plugins}}')
+    _process_substitution('', '{{insert-webpack-plugin-merges}}')
   end
 
   def _write_out_configuration

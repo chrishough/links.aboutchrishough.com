@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "develop": "clear && printf '\\e[3J' && NODE_ENV=development webpack --progress --color --devtool source-map",
-    "staging": "clear && printf '\\e[3J' && NODE_ENV=development webpack",
-    "production": "clear && printf '\\e[3J' && NODE_ENV=production webpack --bail -p",
+    "develop": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack --progress --color --devtool source-map",
+    "staging": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack",
+    "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail -p",
     "lint:js_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
     "lint:css_with_fix": "stylelint 'source/**/*.scss' --syntax scss --fix; exit 0;",
     "lint:js": "eslint 'source/assets/javascripts/**/*.js'",
     "lint:css": "stylelint 'source/**/*.scss' --syntax scss",
-    "test:webpack": "webpack --config webpack.config.js"
+    "test:webpack": "yarn webpack --config webpack.config.js"
   },
   "browserslist": [
     "Last 3 versions"
