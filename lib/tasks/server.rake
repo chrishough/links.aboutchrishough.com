@@ -8,7 +8,11 @@ namespace :server do
     puts('Open your browser to http://localhost:4567/')
     puts("---------------------------------------------------------->>\n")
 
-    log = verbose == true ? "> tmp/development.log 2>&1" : "" rescue ""
+    log = begin
+      verbose == true ? '> tmp/development.log 2>&1' : ''
+    rescue StandardError
+      ''
+    end
 
     system("bundle exec middleman server -e development --verbose #{log}")
   end
@@ -20,7 +24,11 @@ namespace :server do
       puts('Building static files, but I will not be starting the staging server')
       puts("---------------------------------------------------------->>\n")
 
-      log = verbose == true ? "> tmp/staging.log 2>&1" : "" rescue ""
+      log = begin
+        verbose == true ? '> tmp/staging.log 2>&1' : ''
+      rescue StandardError
+        ''
+      end
 
       system("time bundle exec middleman server -e staging --verbose #{log}")
     end
@@ -31,7 +39,11 @@ namespace :server do
       puts('Building static files, but I will not be starting the production server')
       puts("---------------------------------------------------------->>\n")
 
-      log = verbose == true ? "> tmp/production.log 2>&1" : "" rescue ""
+      log = begin
+        verbose == true ? '> tmp/production.log 2>&1' : ''
+      rescue StandardError
+        ''
+      end
 
       system("time bundle exec middleman server -e production --verbose #{log}")
     end

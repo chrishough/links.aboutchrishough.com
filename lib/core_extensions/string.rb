@@ -11,4 +11,4 @@ module CoreExtensions
     end
   end
 end
-String.prepend( CoreExtensions::String::ConstantName )
+String.prepend(CoreExtensions::String::ConstantName)
