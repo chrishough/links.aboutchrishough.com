@@ -13,7 +13,7 @@ autoload_all 'lib/helpers'
 
 activate :directory_indexes
 
-set :images_dir, 'assets/images'
+# set :images_dir, 'assets/images'
 
 helpers WebpackAssetHelpers
 helpers FolderHelpers
