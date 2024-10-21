@@ -13,7 +13,7 @@ set :protocol, 'https://'
 set :host, 'links.aboutchrishough.com'
 set :port, 80
 
-# TODO!
-# require_relative '../lib/build'
-#
-# after_build { adjust_final_source }
+
+require_relative '../lib/build_process_functions'
+
+after_build { adjust_final_source }
