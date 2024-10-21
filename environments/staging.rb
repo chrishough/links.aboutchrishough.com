@@ -7,6 +7,8 @@ activate :external_pipeline,
 
 Slim::Engine.set_options(pretty: true)
 
+activate :asset_hash, exts: %w[.jpg .png .webmanifest .ico .svg]
+
 set :protocol, 'https://'
 set :host, 'links.aboutchrishough.com'
 set :port, 80
