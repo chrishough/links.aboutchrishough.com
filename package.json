@@ -25,7 +25,7 @@
     "jquery-circle-progress": "^1.2.2",
     "jquery-ui": "^1.14.0",
     "jquery-ui-touch-punch": "^0.2.3",
-    "normalize-scss": "^8.0.0",
+    "normalize-scss": "git+https://github.com/chrishough/normalize-scss-fix-use.git#main",
     "npm": "^6.14.8",
     "popper.js": "^1.16.1",
     "sass": "^1.78.0",
