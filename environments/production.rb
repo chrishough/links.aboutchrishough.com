@@ -18,7 +18,6 @@ set :protocol, 'https://'
 set :host, 'links.aboutchrishough.com'
 set :port, 80
 
-
 require_relative '../lib/build_process_functions'
 
 after_build { adjust_final_source }
