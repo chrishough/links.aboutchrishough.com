@@ -169,10 +169,10 @@ const siteConfig = {
     new WebpackManifestPlugin({
       fileName: 'site-manifest.json',
       publicPath: '/assets/',
-      generate: (seed, files) => files.reduce((manifest, {name, path}) => {
+      generate: (seed, files) => files.reduce((manifest, { name, path }) => {
         manifest[name] = path;
         return manifest;
-      }, {})
+      }, {}),
     }),
     new CleanWebpackPlugin(),
   ],
