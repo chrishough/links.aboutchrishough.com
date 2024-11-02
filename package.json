@@ -4,9 +4,9 @@
     "staging": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack",
     "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail",
     "lint:js_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
-    "lint:css_with_fix": "stylelint 'source/**/*.scss' --syntax scss --fix; exit 0;",
-    "lint:js": "eslint 'source/assets/javascripts/**/*.js'",
-    "lint:css": "stylelint 'source/**/*.scss' --syntax scss",
+    "lint:css_with_fix": "stylelint 'source/**/*.scss' --fix; exit 0;",
+    "lint:js": "yarn eslint 'source/assets/javascripts/**/*.js'",
+    "lint:css": "yarn stylelint 'source/**/*.scss'",
     "test:webpack": "yarn webpack --config webpack.config.js"
   },
   "browserslist": [
@@ -59,11 +59,12 @@
     "sass-loader": "^7.3.1",
     "script-loader": "^0.7.2",
     "style-loader": "^0.23.1",
-    "stylelint": "^8.4.0",
+    "stylelint": "^16.10.0",
     "stylelint-config-recommended": "^2.2.0",
-    "stylelint-config-standard": "^18.3.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^0.8.1",
-    "stylelint-scss": "^3.18.0",
+    "stylelint-scss": "^6.8.1",
     "url-loader": "^1.1.2"
   }
 }
