@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module WebpackAssets
-  DIST_PATH = File.join(Dir.pwd, "build/assets")
+  DIST_PATH = File.join(Dir.pwd, 'build/assets')
 
   def webpack_asset_path(variable, rev_manifest_name)
     _asset(variable, rev_manifest_name)
