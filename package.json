@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "develop": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack --progress --color --devtool source-map",
+    "develop": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack --progress --color --devtool source-map  2>&1 | sed -E '/DEPRECATION WARNING|More info|@import|@use|@return|^ +╷|^ +╵|^ +│|^ +┌──>/,/^$/d' | sed '/WARNING: [0-9]+ repetitive deprecation warnings omitted./d'",
     "staging": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack",
     "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail",
     "lint:js_with_fix": "yarn eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
