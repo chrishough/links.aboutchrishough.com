@@ -1,1 +1,1 @@
-// My Static Site!
+// My Code Only!

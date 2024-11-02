@@ -1,11 +1,20 @@
 "use strict";
 
+// ------------------------------------------
+// ------------------------------------------
+// PREVIOUS VERSION!!!!!!
+// ------------------------------------------
+// ------------------------------------------
+
+
+
+
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const ManifestPlugin = require("webpack-manifest-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const outputPath = path.join(__dirname, "build/assets");
 
 {{insert-webpack-plugins}}
@@ -39,6 +48,36 @@ const siteConfig = {
       "breakpoints": "breakpoints-js/dist/breakpoints.min.js",
       "validation": "jquery-validation/dist/jquery.validate.js",
     }
+  },
+
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          ecma: 8,
+          compress: false,
+          mangle: false,
+          keep_fnames: true,
+          output: {
+            comments: true,
+            beautify: true,
+            indent_level: 2,
+            indent_start: 0,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
   },
 
   module: {
@@ -122,6 +161,9 @@ const siteConfig = {
           {
             loader: "sass-loader",
             options: {
+              sassOptions: {
+                quietDeps: true, // Silence warnings from dependencies
+              },
               includePaths: [
                 path.resolve(__dirname, "node_modules")
               ]
@@ -139,8 +181,9 @@ const siteConfig = {
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
     }),
-    new ManifestPlugin({
-      fileName: "site-manifest.json"
+    new WebpackManifestPlugin({
+      fileName: "site-manifest.json",
+      publicPath: "/assets/"
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor",

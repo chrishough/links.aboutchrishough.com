@@ -1,4 +1,4 @@
-// External Libraries Only!
+// External Code Only!
 window.jQuery = require('jquery');
 
 // eslint-disable-next-line no-multi-assign

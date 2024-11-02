@@ -167,12 +167,12 @@ const siteConfig = {
       Popper: ['popper.js', 'default'],
     }),
     new WebpackManifestPlugin({
-      fileName: 'asset-manifest.json',
+      fileName: 'site-manifest.json',
       publicPath: '/assets/',
-      generate: (seed, files) => files.reduce((manifest, { name, filePath }) => ({
-        ...manifest,
-        [name]: filePath,
-      }), seed),
+      generate: (seed, files) => files.reduce((manifest, {name, path}) => {
+        manifest[name] = path;
+        return manifest;
+      }, {})
     }),
     new CleanWebpackPlugin(),
   ],
