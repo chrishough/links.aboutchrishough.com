@@ -169,9 +169,12 @@ const siteConfig = {
     new WebpackManifestPlugin({
       fileName: 'site-manifest.json',
       publicPath: '/assets/',
+      // eslint-disable-next-line
       generate: (seed, files) => files.reduce((manifest, { name, path }) => {
-        manifest[name] = path;
-        return manifest;
+        return {
+          ...manifest,
+          [name]: path,
+        };
       }, {}),
     }),
     new CleanWebpackPlugin(),
