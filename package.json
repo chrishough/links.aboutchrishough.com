@@ -3,8 +3,8 @@
     "develop": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack --progress --color --devtool source-map",
     "staging": "clear && printf '\\e[3J' && NODE_ENV=development yarn webpack",
     "production": "clear && printf '\\e[3J' && NODE_ENV=production yarn webpack --bail",
-    "lint:js_with_fix": "eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
-    "lint:css_with_fix": "stylelint 'source/**/*.scss' --fix; exit 0;",
+    "lint:js_with_fix": "yarn eslint 'source/assets/javascripts/**/*.js' --fix; exit 0;",
+    "lint:css_with_fix": "yarn stylelint 'source/**/*.scss' --fix; exit 0;",
     "lint:js": "yarn eslint 'source/assets/javascripts/**/*.js'",
     "lint:css": "yarn stylelint 'source/**/*.scss'",
     "test:webpack": "yarn webpack --config webpack.config.js"
