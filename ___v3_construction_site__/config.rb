@@ -11,7 +11,7 @@ set :markdown, fenced_code_blocks: true
 require_all 'lib/helpers'
 autoload_all 'lib/helpers'
 
-activate :directory_indexes
+# activate :directory_indexes
 
 # set :images_dir, 'assets/images'
 

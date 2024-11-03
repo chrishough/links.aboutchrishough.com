@@ -21,6 +21,8 @@ ignore 'assets/javascripts/*'
 ignore 'partials/*'
 ignore 'rev-manifest.json'
 
+activate :directory_indexes
+
 # rubocop:disable Metrics/BlockLength
 helpers do
   def image_url(source)

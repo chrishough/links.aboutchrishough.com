@@ -1,0 +1,47 @@
+$image-path: "../../assets/images/";
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-one: #261A20;
+$color-two: #735865;
+$color-three: #402235;
+$color-four: #734362;
+$color-five: #D99F9A;
+
+// --------------------------------------------------------------
+// MINE ---------------------------------------------------------
+// --------------------------------------------------------------
+
+$default-font-size: 2rem;
+$default-font-color: $color-white;
+
+$background-color-body: $color-one;
+$background-color-fade: $color-black;
+$background-color-slogan: $color-white;
+
+$backdrop-opacity-default: 0.8;
+$backdrop-opacity-dark: 0.9;
+$backdrop-opacity-light: 0.7;
+$backdrop-opacity-medium-light: 0.5;
+$backdrop-opacity-super-light: 0.2;
+
+// --------------------------------------------------------------
+// LIBRARY SPECIFIC ---------------------------------------------
+// --------------------------------------------------------------
+
+$grid-breakpoints: (
+        xs: 0,
+        minimium: 375px,
+        maximum: 500px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+$zindex-cover: 10000 !default;
+
+// --------------------------------------------------------------
+// SITE FONTS ---------------------------------------------------
+// --------------------------------------------------------------

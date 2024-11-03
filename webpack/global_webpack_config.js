@@ -82,7 +82,7 @@ const siteConfig = {
               minimize: true,
               removeComments: false,
               collapseWhitespace: false,
-              name: '[name]-[fullhash].[ext]',
+              name: '[name]-[hash].[ext]',
               publicPath: '/assets/',
             },
           },
@@ -95,7 +95,7 @@ const siteConfig = {
             loader: 'url-loader',
             options: {
               limit: 5000,
-              name: '[name]-[fullhash].[ext]',
+              name: '[name]-[hash].[ext]',
               publicPath: '/assets/',
             },
           },
@@ -122,7 +122,7 @@ const siteConfig = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name]-[fullhash].css',
+              name: '[name]-[hash].css',
               publicPath: '/assets/',
             },
           },

@@ -1,0 +1,7 @@
+@include media-breakpoint-up(xs) {
+  .section-biography-wrapper {
+    background: url('#{$image-path}/backgrounds/biography/20241027.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}

@@ -1,19 +1,19 @@
-@mixin set-gutters($size: 0) {
-  [class*='col-'] {
-    padding-right: $size;
-    padding-left: $size;
-  }
-
-  > [class*='row'] {
-    margin-right: -$size;
-    margin-left: -$size;
-
-    [class*='col-'] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-}
+//@mixin set-gutters($size: 0) {
+//  [class*='col-'] {
+//    padding-right: $size;
+//    padding-left: $size;
+//  }
+//
+//  > [class*='row'] {
+//    margin-right: -$size;
+//    margin-left: -$size;
+//
+//    [class*='col-'] {
+//      padding-right: 0;
+//      padding-left: 0;
+//    }
+//  }
+//}
 
 @mixin background-color-alpha($color: $color-black, $alpha: $backdrop-opacity-default) {
   background-color: rgba($color, $alpha);

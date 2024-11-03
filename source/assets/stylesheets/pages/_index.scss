@@ -1,0 +1,28 @@
+#index {
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    //background-color: $background-color-body;
+    //color: $default-font-color;
+    //font-size: $default-font-size;
+  }
+
+  .section-biography-wrapper,
+  .section-slogan-wrapper,
+  .section-location-wrapper {
+    min-height: 100vh;
+
+    .col-12 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  }
+
+  @import "index/biography";
+  @import "index/slogan";
+  @import "index/location";
+}

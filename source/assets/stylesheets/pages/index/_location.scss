@@ -1,0 +1,13 @@
+@include media-breakpoint-up(xs) {
+  .section-location-wrapper {
+    background: url('#{$image-path}/backgrounds/location/20241027-backgroud.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .section-journey-wrapper {
+      background: url('#{$image-path}/backgrounds/location/20241027-journey.png') no-repeat;
+      background-size: 60%;
+      background-position: center bottom;
+    }
+  }
+}
