@@ -23,7 +23,7 @@ ignore 'rev-manifest.json'
 
 activate :directory_indexes
 
-# rubocop:disable Metrics/BlockLength
+# rubocop:disable Metrics/BlockLength, Style/SuperArguments, Performance/BlockGivenWithExplicitBlock
 helpers do
   def image_url(source)
     return image_path(source) unless external_site_configured?
@@ -78,4 +78,4 @@ helpers do
     config[:port] unless config[:port].to_i == 80
   end
 end
-# rubocop:enable Metrics/BlockLength
+# rubocop:enable Metrics/BlockLength, Style/SuperArguments, Performance/BlockGivenWithExplicitBlock
