@@ -1,6 +1,7 @@
+@use "sass:map";
+
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden auto;
 }
 
 html,
@@ -8,7 +9,7 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   height: 100% !important;
-  min-width: map-get($grid-breakpoints, 'minimium') !important;
+  min-width: map.get($grid-breakpoints, 'minimium') !important;
   min-height: 100% !important;
   background-color: $background-color-body;
   font-size: $default-font-size;
