@@ -19,7 +19,7 @@
       font-weight: bold;
       font-size: $bio-name-font-size;
       color: $bio-name-font-color;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       text-align: center;
       line-height: 50px;
 
@@ -32,15 +32,15 @@
         padding-top: 0.5rem;
       }
 
-      .name-icon {
-        img {
-          padding: 0 0.5rem;
-
-          @include media-breakpoint-up(xs) {
-            max-height: 50px;
-          }
-        }
-      }
+      //.name-icon {
+      //  img {
+      //    padding: 0 0.5rem;
+      //
+      //    @include media-breakpoint-up(xs) {
+      //      max-height: 50px;
+      //    }
+      //  }
+      //}
     }
   }
 }

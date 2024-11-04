@@ -51,10 +51,11 @@ $zindex-cover: 10000 !default;
 
 @mixin default-font { font-family: "Helvetica Neue,Helvetica,Arial,sans-serif;", serif }
 
+@include impact-font-family();
 
 
-
-
+@include default-font-color();
+@include default-font-family();
 
 
 

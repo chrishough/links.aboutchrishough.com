@@ -1,0 +1,16 @@
+div[class="row mx-0"]
+  div[class="col-12 biography-wrapper-inner"]
+    div[class="d-flex justify-content-center align-items-center"]
+      div[class="text-right"]
+        = data.settings.biography.first_name
+      div[class="name-icon"]
+        img[src="#{image_path('backgrounds/biography/20241027-koolaid.png')}"]
+      div[class="text-left"]
+        = data.settings.biography.last_name
+
+  div[class="col-12 social-links"]
+    ul
+      - data.settings.biography.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
+        li
+          = link_to(social.url, target: :_blank) do
+            = social.name

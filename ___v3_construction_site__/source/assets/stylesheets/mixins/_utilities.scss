@@ -14,13 +14,39 @@
 //    }
 //  }
 //}
+//
+//@mixin background-color-alpha($color: $color-black, $alpha: $backdrop-opacity-default) {
+//  background-color: rgba($color, $alpha);
+//}
+//
+//@mixin set-box-shadow($horiz: 0, $vert: 0, $blur: 0.5rem, $spread: 0.25rem, $color: $color-black, $inset: "") {
+//  @include background-color-alpha;
+//
+//  -webkit-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
+//  -moz-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
+//  box-shadow: $horiz $vert $blur $spread $color unquote($inset);
+//  backface-visibility: hidden;
+//}
+//
+//@mixin set-box-shadow-all-sides ($color: $color-black) {
+//  @include background-color-alpha;
+//
+//  box-shadow: inset 0 -1px 1px -1px $color, 0 0 0.5rem 0.25rem $color;
+//}
+//
 
-@mixin background-color-alpha($color: $color-black, $alpha: $backdrop-opacity-default) {
-  background-color: rgba($color, $alpha);
-}
 
-@mixin set-box-shadow($horiz: 0, $vert: 0, $blur: 0.5rem, $spread: 0.25rem, $color: $color-black, $inset: "") {
-  @include background-color-alpha;
+
+// PREVIOUS VERSION TBD ------------------------------------------------
+
+
+
+
+
+
+
+@mixin set-box-shadow($horiz: 0, $vert: 0, $blur: 0.5rem, $spread: 0.25rem, $color: $color-black, $inset: "", $alpha: $backdrop-opacity-default) {
+  @include background-color-alpha($color: $color, $alpha: $alpha);
 
   -webkit-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
   -moz-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
@@ -28,16 +54,15 @@
   backface-visibility: hidden;
 }
 
-@mixin set-box-shadow-all-sides ($color: $color-black) {
-  @include background-color-alpha;
+@mixin set-box-shadow-all-sides ($color: $color-black, $alpha: $backdrop-opacity-default) {
+  @include background-color-alpha($color: $color, $alpha: $alpha);
 
   box-shadow: inset 0 -1px 1px -1px $color, 0 0 0.5rem 0.25rem $color;
 }
 
-
-
-
-// PREVIOUS VERSION TBD ------------------------------------------------
+@mixin drop-shadow($horiz: 0, $vert: 0, $spread: 0.25rem, $color: $color-black) {
+  filter: drop-shadow($horiz $vert $spread $color);
+}
 
 
 

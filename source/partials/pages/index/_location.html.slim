@@ -1,0 +1,9 @@
+div[class="row mx-0 location-wrapper"]
+  div[class="col-12"]
+    div[class="row name"]
+      = data.settings.locations.description
+    div[class="row locations"]
+      ul
+        - data.settings.locations.cities.sort_by { |k| k["id"] }.each_with_index do |city, index|
+          li
+            = city.name

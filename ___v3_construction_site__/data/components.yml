@@ -3,13 +3,13 @@
 #meta:
 #  title: Chris Hough
 #  focus: Nice to meet you!
-#  description: This is the personal landing page of Chris Hough.  From this site you can connect with me on your favorite social networks, see the products I have developed, research my CV, etc. I am happy to connect with you.  If you have a question for me please reach out through social media.
-
-bio:
-#  first_name: Chris
-#  last_name: Hough
-  email: talk@aboutchrishough.com
-  slogan: Founder. Engineer. 1st Principles Thinker. Foodie. Always bougie. Values empathy and family. Quality craftsmanship in every aspect of life. Strongly believes our only competition is our mental, physical, and spiritual health, not anyone else. If you can’t find him creating online, check the gym, a hiking trail, a bike route, or a tattoo shop.
+##  description: This is the personal landing page of Chris Hough.  From this site you can connect with me on your favorite social networks, see the products I have developed, research my CV, etc. I am happy to connect with you.  If you have a question for me please reach out through social media.
+#
+#bio:
+##  first_name: Chris
+##  last_name: Hough
+#  email: talk@aboutchrishough.com
+#  slogan: Founder. Engineer. 1st Principles Thinker. Foodie. Always bougie. Values empathy and family. Quality craftsmanship in every aspect of life. Strongly believes our only competition is our mental, physical, and spiritual health, not anyone else. If you can’t find him creating online, check the gym, a hiking trail, a bike route, or a tattoo shop.
   cities:
     -
       id: 1

@@ -3,11 +3,31 @@
     background: url('#{$image-path}/backgrounds/location/20241027-backgroud.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
+    font-size: 0.75rem;
 
-    .section-journey-wrapper {
+    .location-wrapper {
       background: url('#{$image-path}/backgrounds/location/20241027-journey.png') no-repeat;
-      background-size: 60%;
+      background-size: cover;
       background-position: center bottom;
+      background-size: 75%;
+
+      .location-wrapper {
+        @include default-font-family();
+
+        padding: 0.5rem 1rem;
+
+        .locations {
+          ul {
+            list-style-type: none;
+            padding: 0.75rem 0 0 0;
+          }
+
+          li {
+            text-align: left;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
   }
 }

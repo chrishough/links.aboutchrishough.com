@@ -1,7 +1,19 @@
 @include media-breakpoint-up(xs) {
   .section-slogan-wrapper {
-    background: url('#{$image-path}/backgrounds/slogan/20241027.jpg') no-repeat;
+    background: url('#{$image-path}/backgrounds/slogan/20241027-background.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
+    font-size: 0.75rem;
+
+    .slogan-wrapper {
+      @include default-font-family();
+
+      padding: 0.5rem;
+
+      #slogan-signature {
+        margin-top: 25px;
+        max-height: 75px;
+      }
+    }
   }
 }
