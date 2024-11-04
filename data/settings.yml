@@ -29,12 +29,17 @@ locations:
   description: Chris has been a digital nomad for over eighteen years and counting. His inner child loves adventures and exploring communities through foodie experiences.  If you asked his therapist about him, she would say he's beyond grateful for where he's at and appreciative of what he has, but will never be complacent.  Constant learning, excelling at his passions, and living a full life is part of his DNA.
   cities:
     - id: 1
-      name: Chicago
+      city: Chicago
+      state: IL
     - id: 2
-      name: Boulder
+      city: Boulder
+      state: CO
     - id: 3
-      name: Manhattan
+      city: Manhattan
+      state: NY
     - id: 4
-      name: Portland
+      city: Portland
+      state: OR
     - id: 5
-      name: Las Vegas
+      city: Las Vegas
+      state: NV

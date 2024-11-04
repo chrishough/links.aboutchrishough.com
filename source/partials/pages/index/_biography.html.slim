@@ -12,5 +12,16 @@ div[class="row mx-0"]
     ul
       - data.settings.biography.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
         li
+          ruby:
+            symbol = case index
+              when 0 then '&spades;'
+              when 1 then '&hearts;'
+              when 2 then '&clubs;'
+              when 3 then '&diams;'
+            end
+
+          span
+            = symbol
+
           = link_to(social.url, target: :_blank) do
             = social.name
