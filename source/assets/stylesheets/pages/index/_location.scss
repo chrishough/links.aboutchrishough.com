@@ -1,12 +1,12 @@
 @include media-breakpoint-up(xs) {
   .section-location-wrapper {
-    background: url('#{$image-path}/backgrounds/location/20241027-backgroud.jpg') no-repeat;
+    background: url('#{$image-path}/backgrounds/location/20241027-backgroud-map.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     font-size: 0.75rem;
 
     .location-wrapper {
-      background: url('#{$image-path}/backgrounds/location/20241027-journey.png') no-repeat;
+      background: url('#{$image-path}/backgrounds/location/20241027-avatar-journey.png') no-repeat;
       background-size: cover;
       background-position: center bottom;
       background-size: 75%;

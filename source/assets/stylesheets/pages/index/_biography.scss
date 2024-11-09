@@ -1,13 +1,47 @@
 @include media-breakpoint-up(xs) {
   .section-biography-wrapper {
-    background: url('#{$image-path}/backgrounds/biography/20241027-background.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    @include media-breakpoint-up(xs) {
+      background: url('#{$image-path}/backgrounds/biography/20241027-background-avatar.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    @include media-breakpoint-up(md) {
+      background: url('#{$image-path}/backgrounds/biography/20241027-background-collage.jpg');
+      background-position: left center;
+      background-size: contain;
+      background-repeat: repeat;
+    }
 
     .biography-wrapper {
-      .biography-wrapper-inner {
-        @include background-color-alpha($color: $color-one, $alpha: $backdrop-opacity-dark);
-        @include box-shadow($horiz: 0, $vert: -0.25rem, $blur: 0.5rem, $spread: 0, $color: $color-one);
+      .biography-wrapper-inner-left {
+        background: url('#{$image-path}/backgrounds/biography/20241027-avatar-pointer.png');
+        background-size: cover;
+        background-position: center center;
+        background-size: 75%;
+        background-repeat: no-repeat;
+      }
+
+      .biography-wrapper-right {
+        @include media-breakpoint-up(xs) {
+          box-shadow: none;
+        }
+
+        @include media-breakpoint-up(md) {
+          @include box-shadow-all-sides();
+        }
+      }
+
+      .biography-wrapper-inner-right {
+        @include media-breakpoint-up(xs) {
+          @include background-color-alpha($color: $color-one, $alpha: $backdrop-opacity-dark);
+        }
+
+        @include media-breakpoint-up(md) {
+          box-shadow: none;
+        }
+
         @include impact-font-family();
 
         width: 100%;
@@ -30,9 +64,15 @@
       }
 
       .social-links {
-        @include background-color-alpha($color: $color-three, $alpha: $backdrop-opacity-dark);
-        @include box-shadow($horiz: 0, $vert: 0.25rem, $blur: 0.5rem, $spread: 0, $color: $color-three);
+        @include media-breakpoint-up(xs) {
+          @include box-shadow($horiz: 0, $vert: 0.25rem, $blur: 0.5rem, $spread: 0, $color: $color-three);
+        }
 
+        @include media-breakpoint-up(md) {
+          box-shadow: none;
+        }
+
+        @include background-color-alpha($color: $color-three, $alpha: $backdrop-opacity-dark);
 
         ul {
           list-style-type: none;

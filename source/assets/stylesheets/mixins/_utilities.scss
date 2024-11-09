@@ -24,3 +24,7 @@
   -moz-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
   box-shadow: $horiz $vert $blur $spread $color unquote($inset);
 }
+
+@mixin box-shadow-all-sides ($color: $color-black) {
+  @include box-shadow($color: $color);
+}

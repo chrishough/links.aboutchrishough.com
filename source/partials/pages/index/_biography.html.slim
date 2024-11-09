@@ -1,27 +1,34 @@
-div[class="row mx-0"]
-  div[class="col-12 biography-wrapper-inner"]
-    div[class="d-flex justify-content-center align-items-center"]
-      div[class="text-right"]
-        = data.settings.biography.first_name
-      div[class="name-icon"]
-        img[src="#{image_path('backgrounds/biography/20241027-koolaid.png')}"]
-      div[class="text-left"]
-        = data.settings.biography.last_name
+div[class="row mx-0 h-100"]
+  div[class="d-none d-md-block col-md-6"]
+    div[class="row h-100"]
+      div[class="col-12 biography-wrapper-inner-left"]
+  div[class="col-xs-12 col-md-5 d-flex justify-content-center align-items-center"]
+    div[class="row biography-wrapper-right"]
+      div[class="col-12 biography-wrapper-inner-right"]
+        div[class="d-flex justify-content-center align-items-center"]
+          div[class="text-right"]
+            = data.settings.biography.first_name
+          div[class="name-icon"]
+            img[src="#{image_path('backgrounds/biography/20241027-koolaid.png')}"]
+          div[class="text-left"]
+            = data.settings.biography.last_name
 
-  div[class="col-12 social-links"]
-    ul
-      - data.settings.biography.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
-        li
-          ruby:
-            symbol = case index
-              when 0 then '&spades;'
-              when 1 then '&hearts;'
-              when 2 then '&clubs;'
-              when 3 then '&diams;'
-            end
+      div[class="col-12 social-links"]
+        ul
+          - data.settings.biography.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
+            li
+              ruby:
+                symbol = case index
+                  when 0 then '&spades;'
+                  when 1 then '&hearts;'
+                  when 2 then '&clubs;'
+                  when 3 then '&diams;'
+                end
 
-          span
-            = symbol
+              span
+                = symbol
 
-          = link_to(social.url, target: :_blank) do
-            = social.name
+              = link_to(social.url, target: :_blank) do
+                = social.name
+
+  div[class="d-none d-md-block col-md-1"]
