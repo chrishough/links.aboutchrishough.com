@@ -1,11 +1,25 @@
 @include media-breakpoint-up(xs) {
   .section-slogan-wrapper {
-    background: url('#{$image-path}/backgrounds/slogan/20241027-background-forest.jpg') no-repeat;
+    background: url('#{$image-path}/backgrounds/slogan/20241027-background-forest.jpg');
     background-size: cover;
     background-position: center center;
+    background-repeat: repeat;
     font-size: 0.75rem;
 
     .slogan-wrapper {
+      @include media-breakpoint-up(xs) {
+        background: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        background: url('#{$image-path}/backgrounds/location/20241027-background-pointer.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 75%;
+      }
+    }
+
       @include default-font-family();
 
       padding: 0.5rem;
