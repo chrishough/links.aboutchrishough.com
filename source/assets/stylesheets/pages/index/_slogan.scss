@@ -9,7 +9,6 @@
     .slogan-wrapper {
       @include media-breakpoint-up(xs) {
         background: none;
-        padding: 0.5rem;
       }
 
       @include media-breakpoint-up(md) {
