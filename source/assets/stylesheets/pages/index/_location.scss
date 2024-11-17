@@ -9,10 +9,6 @@
       background-position: right center;
     }
 
-    @include media-breakpoint-up(md) {
-      background-position: center center;
-    }
-
     .location-wrapper {
       @include media-breakpoint-up(xs) {
         background: none;
