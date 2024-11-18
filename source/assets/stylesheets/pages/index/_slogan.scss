@@ -6,6 +6,16 @@
     background-position: center center;
     font-size: 0.75rem;
 
+    @include media-breakpoint-up(xs) {
+      border: 0 solid $color-five;
+      border-width: 0 0 0.1rem 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border: 0 solid $color-five;
+      border-width: 0 0.1rem 0 0;
+    }
+
     .slogan-wrapper {
       @include media-breakpoint-up(xs) {
         background: none;

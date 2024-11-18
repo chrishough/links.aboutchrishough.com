@@ -26,11 +26,6 @@
     }
   }
 
-  .section-biography-wrapper,
-  .section-slogan-wrapper {
-    border-bottom: 0.1rem solid $color-five;
-  }
-
   @import "index/biography";
   @import "index/slogan";
   @import "index/location";

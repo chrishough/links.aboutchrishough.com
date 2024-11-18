@@ -7,6 +7,12 @@
 
     @include media-breakpoint-up(xs) {
       background-position: right center;
+      border: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border: 0 solid $color-five;
+      border-width: 0 0 0 0.1rem;
     }
 
     .location-wrapper {
