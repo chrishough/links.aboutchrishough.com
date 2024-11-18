@@ -11,9 +11,9 @@
       border-width: 0 0 0.1rem 0;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       border: 0 solid $color-five;
-      border-width: 0 0.1rem 0 0;
+      border-width: 0 0.05rem 0 0;
     }
 
     .slogan-wrapper {
@@ -30,11 +30,21 @@
         padding: 0.5rem 1rem;
       }
 
+      @include media-breakpoint-up(lg) {
+        background-size: 75%;
+      }
+
       @include default-font-family();
 
-      #slogan-signature {
-        margin-top: 25px;
-        max-height: 75px;
+      .slogan-signature-wrapper {
+        padding-top: 1rem;
+
+        #slogan-avatar {
+          max-width: 100px;
+          border: 2px solid $color-white;
+          border-radius: 50%;
+          object-fit: cover;
+        }
       }
     }
   }

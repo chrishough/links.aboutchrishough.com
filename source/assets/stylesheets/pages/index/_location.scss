@@ -10,9 +10,9 @@
       border: none;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       border: 0 solid $color-five;
-      border-width: 0 0 0 0.1rem;
+      border-width: 0 0 0 0.05rem;
     }
 
     .location-wrapper {
@@ -29,6 +29,10 @@
         background-repeat: no-repeat;
         background-size: 50%;
         padding: 0.5rem 1rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        background-size: 60%;
       }
 
       .locations {
