@@ -5,8 +5,6 @@
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-
-      border: 0 0 0.1rem 0 solid $color-five;
     }
 
     @include media-breakpoint-up(md) {
@@ -32,6 +30,10 @@
         background-position: center center;
         background-size: 75%;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-up(lg) {
+          transform: scale(1.5) translateX(-50px);
+        }
       }
 
       .biography-wrapper-right {
