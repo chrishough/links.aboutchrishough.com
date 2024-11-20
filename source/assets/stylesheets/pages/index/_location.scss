@@ -25,10 +25,14 @@
       @include media-breakpoint-up(md) {
         background: url('#{$image-path}/backgrounds/location/20241027-avatar-journey.png');
         background-size: cover;
-        background-position: center bottom;
+        background-position: right bottom;
         background-repeat: no-repeat;
         background-size: 50%;
         padding: 0.5rem 1rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        background-size: 45%;
       }
 
       .locations {
