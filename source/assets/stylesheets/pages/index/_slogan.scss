@@ -30,10 +30,6 @@
         padding: 0.5rem 1rem;
       }
 
-      @include media-breakpoint-up(lg) {
-        background-size: 75%;
-      }
-
       @include default-font-family();
 
       .slogan-signature-wrapper {

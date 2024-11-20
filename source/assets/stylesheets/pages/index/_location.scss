@@ -31,10 +31,6 @@
         padding: 0.5rem 1rem;
       }
 
-      @include media-breakpoint-up(lg) {
-        background-size: 60%;
-      }
-
       .locations {
         padding-left: 0;
         font-size: 0.65rem;
