@@ -8,19 +8,22 @@ meta:
 biography:
   first_name: Chris
   last_name: Hough
-  social:
-    - id: 1
-      name: Let’s Connect on LinkedIn!
-      url: http://connect.aboutchrishough.com
-    - id: 2
-      name: Blogging on Instagram!
-      url: http://writing.aboutchrishough.com
-    - id: 3
-      name: Thoughts on X!
-      url: http://thoughts.aboutchrishough.com
-    - id: 4
-      name: My Side Hustle!
-      url: http://sidehustle.aboutchrishough.com
+  connect:
+    symbol: '&spades;'
+    name: Connect on LinkedIn
+    url: http://connect.aboutchrishough.com
+  writing:
+    symbol: '&hearts;'
+    name: Blogging on Instagram
+    url: http://writing.aboutchrishough.com
+  thoughts:
+    symbol: '&clubs;'
+    name: Thoughts on X
+    url: http://thoughts.aboutchrishough.com
+  sidehustle:
+    symbol: '&diams;'
+    name: My Side Hustle
+    url: http://sidehustle.aboutchrishough.com
 
 slogan:
   description: 1st Principles Thinker. Founder. Engineer. Storyteller. A quality-focused craftsman with an abundance mindset. Who strongly believes our only competition is our mental, physical, & spiritual health, never anyone else.  When his hands are off the keys, find him lifting iron at the gym, cycling on the road or a mountain downhill, or running through numerous type 2 activities! The rest can be found tattooed on his body.

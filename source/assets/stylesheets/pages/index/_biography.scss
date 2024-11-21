@@ -16,6 +16,11 @@
       background-repeat: repeat;
     }
 
+    @include media-breakpoint-up(xxl) {
+      border: none;
+      background: none;
+    }
+
     .biography-wrapper {
       @include media-breakpoint-up(xs) {
         border: 0 solid $color-five;
@@ -32,6 +37,10 @@
         background-position: center center;
         background-size: 75%;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-up(xxl) {
+          background: none;
+        }
       }
 
       .biography-wrapper-right {
@@ -41,6 +50,10 @@
 
         @include media-breakpoint-up(md) {
           @include box-shadow-all-sides();
+        }
+
+        @include media-breakpoint-up(xxl) {
+          box-shadow: none;
         }
       }
 
@@ -63,7 +76,7 @@
         .name-icon {
           margin: 0 0.25rem;
 
-          img {
+          #koolaid {
             vertical-align: unset;
             margin: 0.5rem 0 0 0;
 
@@ -71,39 +84,63 @@
               max-height: 50px;
             }
           }
+
+          #avatar {
+            max-width: 150px;
+            border: 2px solid $color-five;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1rem 0.5rem;
+          }
         }
       }
 
       .social-links {
+        @include background-color-alpha($color: $color-three, $alpha: $backdrop-opacity-dark);
+
+        font-size: 0.75rem;
+
+        a {
+          color: $color-five;
+          text-decoration: none;
+        }
+
+        a:not(:last-child) {
+          border: 0 solid $color-two;
+          border-width: 0 0 0.1rem 0;
+        }
+
+        a:hover {
+          color: $color-two;
+          background-color: $color-five;
+        }
+
         @include media-breakpoint-up(xs) {
           @include box-shadow($horiz: 0, $vert: 0.25rem, $blur: 0.5rem, $spread: 0, $color: $color-three);
+
+          a {
+            padding: 0.5rem 0;
+          }
+
+          span {
+            padding-left: 0.5rem;
+            padding-right: 0.25rem;
+          }
         }
 
         @include media-breakpoint-up(md) {
           box-shadow: none;
         }
 
-        @include background-color-alpha($color: $color-three, $alpha: $backdrop-opacity-dark);
-
-        ul {
-          list-style-type: none;
-          padding: 0.75rem 0 0 0;
-        }
-
-        li {
-          @include default-font-family();
-
-          text-align: left;
-          font-size: 0.75rem;
-
-          span {
-            font-size: 0.5rem;
-            padding-right: 0.25rem;
-            color: $color-two;
+        @include media-breakpoint-up(xxl) {
+          a {
+            border: 0 solid $color-two;
+            border-width: 0 0 0.1rem 0;
           }
 
-          a {
-            color: $color-five;
+          a:nth-child(2),
+          a:nth-child(5) {
+            border-left: 0.1rem solid $color-two;
           }
         }
       }

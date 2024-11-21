@@ -3,12 +3,26 @@ id: index
 layout: index
 ---
 
-section[class="row mx-0"]
-  div[class="col-12 section-biography-wrapper"]
-    = partial "partials/pages/index/biography"
+div[class="row mx-0"]
+  div[class="col-12 d-xxl-none"]
+    div[class="row"]
+      section[class="col-12 section-biography-wrapper"]
+        = partial "partials/pages/index/biography"
+      section[class="col-12 col-lg-6 section-slogan-wrapper"]
+        = partial "partials/pages/index/slogan"
+      section[class="col-12 col-lg-6 section-location-wrapper"]
+        = partial "partials/pages/index/location", locals: { show_lottie: true }
 
-  section[class="col-12 col-lg-6 section-slogan-wrapper"]
-    = partial "partials/pages/index/slogan"
+  div[class="d-none d-xxl-block col-xxl-4 section-xxl-content-wrapper"]
+    div[class="row"]
+      section[class="col-12 col-xxl-12 section-biography-wrapper"]
+        = partial "partials/pages/index/biography"
+    div[class="row"]
+      section[class="col-12 col-lg-6 col-xxl-12 section-slogan-wrapper"]
+        = partial "partials/pages/index/slogan"
+    div[class="row"]
+      section[class="col-12 col-lg-6 col-xxl-12 section-location-wrapper"]
+        = partial "partials/pages/index/location"
 
-  section[class="col-12 col-lg-6 section-location-wrapper"]
-    = partial "partials/pages/index/location"
+  div[class="d-none d-xxl-block col-xxl-8"]
+    |TEST

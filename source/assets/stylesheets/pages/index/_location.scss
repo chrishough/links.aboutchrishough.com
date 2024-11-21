@@ -15,6 +15,12 @@
       border-width: 0 0 0 0.05rem;
     }
 
+    @include media-breakpoint-up(xxl) {
+      @include background-color-alpha($color: $color-one, $alpha: $backdrop-opacity-dark);
+      border: none;
+      background-image: none;
+    }
+
     .location-wrapper {
       @include default-font-family();
 
@@ -32,7 +38,14 @@
       }
 
       @include media-breakpoint-up(lg) {
+        align-items: flex-start;
+        padding-top: 5rem;
         background-size: 45%;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        padding: 0.5rem 0;
+        background: none;
       }
 
       .locations {
@@ -41,19 +54,43 @@
 
         .locations-cities {
           padding-left: 0;
+          padding-right: 0;
 
           ul {
             list-style-type: none;
             padding: 0.75rem 0 0 0;
+
+            .home {
+              text-decoration: underline;
+              text-decoration-color: $color-five;
+              text-underline-offset: 10px;
+              text-decoration-thickness: 5px;
+            }
           }
 
           li {
             text-align: left;
             text-transform: uppercase;
+
+            @include media-breakpoint-up(xxl) {
+              display: inline;
+            }
+          }
+
+          @include media-breakpoint-up(xxl) {
+            li::after {
+              content: " / ";
+            }
+
+            li:last-child::after {
+              content: "";
+            }
           }
         }
 
         .locations-lottie {
+          padding: 0;
+
           @include media-breakpoint-up(xs) {
             display: flex;
             align-items: center;
@@ -64,8 +101,6 @@
           @include media-breakpoint-up(md) {
             display: none;
           }
-
-          padding: 0;
 
           #locations-lottie-animation {
             width: 100%;
