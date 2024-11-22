@@ -32,6 +32,7 @@
 
     @include media-breakpoint-up(xxl) {
       min-height: inherit;
+      padding: 0;
     }
 
     .biography-wrapper,
