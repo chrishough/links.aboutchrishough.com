@@ -78,7 +78,7 @@
           @include media-breakpoint-up(xxl) {
             li::after {
               content: " / ";
-              text-decoration-color: $color-five;
+              color: $color-five;
             }
 
             li:last-child::after {
