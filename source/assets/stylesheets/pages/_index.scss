@@ -55,6 +55,32 @@
     }
   }
 
+  #crazy-avatar-video-wrapper {
+    @include media-breakpoint-up(xs) {
+      display: none;
+    }
+
+    //@include media-breakpoint-up(xxl) {
+    //  display: block;
+    //  padding: 0;
+    //  margin: 0;
+    //
+    //  #crazy-avatar-video-background {
+    //    min-width: 100%;
+    //    min-height: 100%;
+    //  }
+    //
+    //  #crazy-avatar-fade-background-overlay {
+    //    position: absolute;
+    //    top: 0;
+    //    width: 15px;
+    //    height: 100%;
+    //    background: linear-gradient(to right, $color-black, transparent);
+    //    pointer-events: none;
+    //  }
+    //}
+  }
+
   @import "index/biography";
   @import "index/slogan";
   @import "index/location";
