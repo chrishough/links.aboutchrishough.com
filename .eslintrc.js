@@ -27,7 +27,7 @@ module.exports = {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
     }],
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'func-names': ['error', 'never'],
     'import/no-unresolved': ['error', {
       ignore: ['fontawesome', 'breakpoints'],
