@@ -24,7 +24,7 @@
     .biography-wrapper {
       @include media-breakpoint-up(xs) {
         border: 0 solid $color-five;
-        border-width: 0 0 0.1rem 0;
+        border-width: 0 0 0.1rem;
       }
 
       @include media-breakpoint-up(xxl) {
@@ -33,7 +33,6 @@
 
       .biography-wrapper-inner-left {
         background: url('#{$image-path}/backgrounds/biography/20241027-avatar-pointer.png');
-        background-size: cover;
         background-position: center center;
         background-size: 75%;
         background-repeat: no-repeat;
@@ -78,7 +77,7 @@
 
           #koolaid {
             vertical-align: unset;
-            margin: 0.5rem 0 0 0;
+            margin: 0.5rem 0 0;
 
             @include media-breakpoint-up(xs) {
               max-height: 50px;
@@ -107,7 +106,7 @@
 
         a:not(:last-child) {
           border: 0 solid $color-two;
-          border-width: 0 0 0.1rem 0;
+          border-width: 0 0 0.1rem;
         }
 
         a:hover {
@@ -135,7 +134,7 @@
         @include media-breakpoint-up(xxl) {
           a {
             border: 0 solid $color-two;
-            border-width: 0 0 0.1rem 0;
+            border-width: 0 0 0.1rem;
           }
 
           a:nth-child(2),

@@ -20,8 +20,6 @@
 }
 
 @mixin box-shadow($horiz: 0, $vert: 0, $blur: 0.5rem, $spread: 0.25rem, $color: $color-black, $inset: "") {
-  -webkit-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
-  -moz-box-shadow: $horiz $vert $blur $spread $color unquote($inset);
   box-shadow: $horiz $vert $blur $spread $color unquote($inset);
 }
 

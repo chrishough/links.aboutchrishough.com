@@ -16,6 +16,7 @@
 
   .section-xxl-content-wrapper {
     @include box-shadow(0.5rem, 0, 0.5rem, 0);
+
     flex-direction: column;
     min-height: 100vh;
   }

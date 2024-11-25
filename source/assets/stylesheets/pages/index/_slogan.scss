@@ -8,7 +8,7 @@
 
     @include media-breakpoint-up(xs) {
       border: 0 solid $color-five;
-      border-width: 0 0 0.1rem 0;
+      border-width: 0 0 0.1rem;
     }
 
     @include media-breakpoint-up(lg) {
@@ -18,8 +18,9 @@
 
     @include media-breakpoint-up(xxl) {
       @include background-color-alpha($color: $color-four, $alpha: $backdrop-opacity-dark);
+
       border: 0 solid $color-two;
-      border-width: 0 0 0.05rem 0;
+      border-width: 0 0 0.05rem;
       background-image: none;
     }
 
@@ -30,7 +31,6 @@
 
       @include media-breakpoint-up(md) {
         background: url('#{$image-path}/backgrounds/slogan/20241027-avatar-pointer.png');
-        background-size: cover;
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: 50%;

@@ -16,20 +16,21 @@
   width: 60px;
   aspect-ratio: 1;
   background: linear-gradient($color-five 0 0) bottom/100% 0% no-repeat $color-white;
-  -webkit-mask:
+  mask:
           radial-gradient(circle at 60% 65%, $color-black 62%, transparent 65%) top left,
           radial-gradient(circle at 40% 65%, $color-black 62%, transparent 65%) top right,
           linear-gradient(to bottom left, $color-black 42%, transparent 43%) bottom left,
           linear-gradient(to bottom right, $color-black 42%, transparent 43%) bottom right;
-  -webkit-mask-size: 50% 50%;
-  -webkit-mask-repeat: no-repeat;
-  animation: fillHeart 2s linear forwards;
+  mask-size: 50% 50%;
+  mask-repeat: no-repeat;
+  animation: fill-heart 2s linear forwards;
 }
 
-@keyframes fillHeart {
+@keyframes fill-heart {
   0% {
     background-size: 100% 0%;
   }
+
   100% {
     background-size: 100% 100%;
   }
