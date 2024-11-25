@@ -15,10 +15,13 @@ const siteConfig = {
     vendor: [
       path.join(__dirname, '/source/assets/javascripts/vendor.js'),
     ],
-    site: [
-      path.join(__dirname, '/source/assets/stylesheets/site.scss'),
-      path.join(__dirname, '/source/assets/javascripts/site.js'),
-    ],
+    site: {
+      import: [
+        path.join(__dirname, '/source/assets/stylesheets/site.scss'),
+        path.join(__dirname, '/source/assets/javascripts/site.js'),
+      ],
+      dependOn: 'vendor',
+    },
   },
 
   output: {
