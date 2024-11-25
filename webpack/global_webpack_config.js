@@ -46,7 +46,9 @@ const siteConfig = {
         terserOptions: {
           ecma: 8,
           parse: {},
-          compress: false,
+          compress: {
+            drop_console: isProduction,
+          },
           mangle: false,
           keep_fnames: true,
           output: {

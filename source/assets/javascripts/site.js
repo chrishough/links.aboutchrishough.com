@@ -1,6 +1,7 @@
 // My Code Only!
 
 import breakpoints from './vendor/breakpoints';
+import loader from './components/loader';
 import index from './pages/index';
 
 $(document).ready(() => {
@@ -8,6 +9,7 @@ $(document).ready(() => {
   const $bodyId = $body.attr('id');
 
   breakpoints();
+  loader();
 
   switch ($bodyId) {
     case 'index':
