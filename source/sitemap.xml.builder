@@ -6,9 +6,9 @@ xml.urlset 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
     next unless page.data.seo != false
 
     location = if page.url != '/'
-                 "#{data.components.url}#{page.url}index.html"
+                 "#{data.settings.url}#{page.url}index.html"
                else
-                 "#{data.components.url}/index.html"
+                 "#{data.settings.url}/index.html"
                end
 
     xml.url do
