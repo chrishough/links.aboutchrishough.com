@@ -64,7 +64,16 @@
     #crazy-avatar-video-background {
       min-width: 100%;
       min-height: 100%;
-      transform: translate(-25%, 0);
+
+      @include media-breakpoint-up(xxl) {
+        @media (width >= 1100px) {
+          transform: translate(-25%, 0);
+        }
+
+        @media (width >= 2500px) {
+          transform: none;
+        }
+      }
     }
 
     #crazy-avatar-fade-background-overlay {
