@@ -20,6 +20,7 @@ GEM
     concurrent-ruby (1.3.4)
     contracts (0.16.1)
     csv (3.2.8)
+    date (3.4.0)
     dotenv (3.1.2)
     erubis (2.7.0)
     execjs (2.9.1)
@@ -81,11 +82,23 @@ GEM
       toml
       uglifier (~> 3.0)
       webrick
+    middleman-deploy (2.0.0.pre.alpha)
+      middleman-core (>= 3.2)
+      net-sftp
+      ptools
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
     minitest (5.24.1)
     mutex_m (0.2.0)
+    net-ftp (0.1.4)
+      net-protocol
+      time
+    net-protocol (0.2.2)
+      timeout
+    net-sftp (4.0.0)
+      net-ssh (>= 5.0.0, < 8.0.0)
+    net-ssh (7.3.0)
     padrino-helpers (0.15.3)
       i18n (>= 0.6.7, < 2)
       padrino-support (= 0.15.3)
@@ -101,6 +114,7 @@ GEM
       method_source (~> 1.0)
     pry-nav (1.0.0)
       pry (>= 0.9.10, < 0.15)
+    ptools (1.5.0)
     public_suffix (6.0.1)
     racc (1.8.1)
     rack (2.2.9)
@@ -147,6 +161,9 @@ GEM
     temple (0.8.2)
     thor (1.2.2)
     tilt (2.0.11)
+    time (0.4.1)
+      date
+    timeout (0.4.2)
     titleize (1.4.1)
     toml (0.3.0)
       parslet (>= 1.8.0, < 3.0.0)
@@ -166,8 +183,10 @@ DEPENDENCIES
   csv
   highline
   middleman (~> 4.5, >= 4.5.1)
+  middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-minify-html
   mutex_m
+  net-ftp (~> 0.1.3)
   pry
   pry-nav
   rake

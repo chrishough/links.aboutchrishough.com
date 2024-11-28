@@ -13,6 +13,8 @@ gem 'require_all'
 gem 'builder'
 gem 'middleman', '~> 4.5', '>= 4.5.1'
 gem 'middleman-minify-html'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'net-ftp', '~> 0.1.3'
 gem 'redcarpet'
 
 # Unfortunately Middleman v4 incompatible with slim v5

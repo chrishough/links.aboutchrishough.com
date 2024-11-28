@@ -30,9 +30,9 @@ ignore 'rev-manifest.json'
 activate :directory_indexes
 
 activate :deploy do |deploy|
-  deploy.build_before   = true
-  deploy.deploy_method  = :git
-  deploy.branch         = 'gh-pages'
+  deploy.build_before = true
+  deploy.deploy_method = :git
+  deploy.branch       = 'gh-pages'
 end
 
 # rubocop:disable Metrics/BlockLength, Style/SuperArguments, Performance/BlockGivenWithExplicitBlock
