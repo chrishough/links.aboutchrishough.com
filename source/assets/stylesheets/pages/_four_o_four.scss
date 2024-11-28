@@ -5,7 +5,6 @@
     min-height: 100vh;
     padding-right: 0;
     padding-left: 0;
-
     background: url('#{$image-path}/backgrounds/four-o-four/20241027-screaming-cat.jpg');
     background-size: cover;
     background-position: center center;
@@ -21,6 +20,7 @@
 
       .section-header {
         @include background-color-alpha($color: $color-one, $alpha: $backdrop-opacity-dark);
+
         border-top: 0.1rem solid $color-two;
         border-bottom: 0.1rem solid $color-two;
         text-transform: uppercase;
