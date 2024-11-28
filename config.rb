@@ -12,9 +12,15 @@ set :markdown, fenced_code_blocks: true
 set :images_dir, 'assets/images'
 
 require_relative 'lib/webpack/webpack_assets'
+
 autoload :WebpackAssets, 'lib/webpack/webpack_assets'
 
 helpers WebpackAssets
+
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+page '/sitemap.xml', layout: false
 
 ignore 'assets/stylesheets/*'
 ignore 'assets/javascripts/*'
@@ -22,6 +28,12 @@ ignore 'partials/*'
 ignore 'rev-manifest.json'
 
 activate :directory_indexes
+
+activate :deploy do |deploy|
+  deploy.build_before   = true
+  deploy.deploy_method  = :git
+  deploy.branch         = 'gh-pages'
+end
 
 # rubocop:disable Metrics/BlockLength, Style/SuperArguments, Performance/BlockGivenWithExplicitBlock
 helpers do
