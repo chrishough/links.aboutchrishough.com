@@ -1,6 +1,7 @@
 = partial "partials/components/document" do
   = partial "partials/components/header"
   = partial "partials/components/body" do
+    = partial "partials/components/loader"
 
     main[class="container-fluid"]
       == yield

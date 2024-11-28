@@ -1,0 +1,52 @@
+div[class="row mx-0 h-100 biography-wrapper"]
+  div[class="d-none d-lg-block col-lg-1 d-xxl-none"]
+  div[class="d-none d-md-block h-100 col-md-6 col-lg-5 d-xxl-none"]
+    div[class="row h-100"]
+      div[class="col-12 h-100 biography-wrapper-inner-left"]
+  div[class="col-xs-12 col-md-5 col-lg-4 col-xxl-12 d-flex justify-content-center align-items-center"]
+    div[class="row biography-wrapper-right"]
+      div[class="col-12 biography-wrapper-inner-right"]
+        div[class="d-flex justify-content-center align-items-center"]
+          div[class="text-right"]
+            = data.settings.biography.first_name
+          div[class="name-icon d-xxl-none"]
+            img[id="koolaid" src="#{image_path('backgrounds/biography/20241027-koolaid.png')}"]
+          div[class="d-none d-xxl-block name-icon"]
+            img[id="avatar" src="#{image_path('backgrounds/biography/20241027-background-avatar.jpg')}"]
+          div[class="text-left"]
+            = data.settings.biography.last_name
+
+      div[class="col-12 social-links"]
+          div[class="row"]
+            = link_to(data.settings.biography.connect.url, target: :_blank, class: "col-12 col-xxl-6") do
+              div
+                span
+                  = data.settings.biography.connect.symbol
+                = data.settings.biography.connect.name
+
+            = link_to(data.settings.biography.thoughts.url, target: :_blank, class: "d-none d-xxl-block col-xxl-6") do
+              div
+                span
+                  = data.settings.biography.thoughts.symbol
+                = data.settings.biography.thoughts.name
+
+            = link_to(data.settings.biography.writing.url, target: :_blank, class: "col-12 col-xxl-6") do
+              div
+                span
+                  = data.settings.biography.writing.symbol
+                = data.settings.biography.writing.name
+
+            = link_to(data.settings.biography.thoughts.url, target: :_blank, class: "col-12 d-xxl-none") do
+              div
+                span
+                  = data.settings.biography.thoughts.symbol
+                = data.settings.biography.thoughts.name
+
+            = link_to(data.settings.biography.sidehustle.url, target: :_blank, class: "col-12 col-xxl-6") do
+              div
+                span
+                  = data.settings.biography.sidehustle.symbol
+                = data.settings.biography.sidehustle.name
+
+
+  div[class="d-none d-md-block col-md-1 d-xxl-none"]

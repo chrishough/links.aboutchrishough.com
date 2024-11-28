@@ -1,4 +1,16 @@
-## Disclaimer :bangbang:
+### ABOUT THIS WEBSITE
+> You can fork me, however, please find a spot to credit back.
+
+* This static builder uses Ruby, Webpack, & Middleman. You can find the details of all the libraries used in the 
+  gemfile and package.json files. For the laytout Bootstrap & SCSS were utilized. 
+* The site has multiple breakpoints with easter eggs littered in each variation from xs to xxxl ( 2500px wide ). 
+  This expands on the Bootstrap breakpoints, but should work in every version of the iPhone. Sorry but Androids were 
+  not tested for this project, however, they should work with the breakpoints all the way up to a huge big screen tv. 
+  Check it out!
+
+> If you have any questions, please reach out on LinkedIn.
+
+### :bangbang:DISCLAIMER:bangbang:
 
 This is a personal website and blog. That fact means nothing. This is not a peer-reviewed journal, a final archive of our writing, a sponsored publication, or the product of gatekeeping and editing.  We write about things that we care about, and things that we have experienced. Our thoughts and experiences published here are our own, and have nothing to do with current, previous or future employers, our clients, or our startups.
 
@@ -8,4 +20,4 @@ Opinions and characterizations of fact here are our own and represent no one els
 
 We are human beings and our website and blog reflects and embodies that humanity.
 
-*Thank you to all of the amazing oss developers out there.  Without your support the internet would be a ghost town.*
+> Thank you to all of the amazing oss developers out there. 

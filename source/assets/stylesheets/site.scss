@@ -1,10 +1,18 @@
 @charset "utf-8";
 
-@import "~normalize-scss/sass/normalize/import-now";
-@import "settings";
-@import "vendor/bootstrap";
-@import "vendor/google_fonts";
+// Variables used for libraries and local css
+@import "components/variables";
+
+// Libraries
+@import "vendor/libraries";
+
+// Libraries
 @import "mixins/*";
+
+// Components
 @import "components/html-body";
-@import "pages/index/index";
-@import "pages/four-o-four/index";
+@import "components/loader";
+
+// Pages
+@import "pages/index";
+@import "pages/four_o_four";

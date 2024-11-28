@@ -3,52 +3,25 @@ id: index
 layout: index
 ---
 
-section[class="col-12 mx-auto section-outer-wrapper"]
-  div[class="row"]
-    div[class="col-12 mx-auto section-inner-wrapper"]
-      div[class="row bio-wrapper"]
-        div[class="col-5 mx-auto avatar-wrapper"]
-          img[src="#{image_path('avatar/20220824.png')}"]
-        div[class="col-7 name-locations-wrapper"]
-          div[class="row name"]
-            = data.components.bio.name
-          div[class="row locations"]
-            ul
-              - data.components.bio.cities.sort_by { |k| k["id"] }.each_with_index do |city, index|
-                li
-                  = city.name
-        div[class="col-12 mx-auto slogan-wrapper"]
-          = data.components.bio.slogan
+div[class="row mx-0"]
+  div[class="col-12 d-xxl-none"]
+    div[class="row"]
+      section[class="col-12 section-biography-wrapper"]
+        = partial "partials/pages/index/biography"
+      section[class="col-12 col-lg-6 section-slogan-wrapper"]
+        = partial "partials/pages/index/slogan"
+      section[class="col-12 col-lg-6 section-location-wrapper"]
+        = partial "partials/pages/index/location", locals: { show_lottie: true }
 
-      div[class="row social-wrapper"]
-        div[class="col-12"]
-          ul
-            - data.components.social.sort_by { |k| k["id"] }.each_with_index do |social, index|
-              li
-                = link_to(social.url, target: :_blank) do
-                  i[class="#{social.class_name}" alt="#{social.name}"]
+  div[class="d-none d-xxl-flex col-xxl-4 col-xxxl-3 section-xxl-content-wrapper"]
+    div[class="row"]
+      section[class="col-12 col-xxl-12 section-biography-wrapper"]
+        = partial "partials/pages/index/biography"
+    div[class="row"]
+      section[class="col-12 col-lg-6 col-xxl-12 section-slogan-wrapper"]
+        = partial "partials/pages/index/slogan"
+    div[class="row flex-grow-1"]
+      section[class="col-12 col-lg-6 col-xxl-12 section-location-wrapper"]
+        = partial "partials/pages/index/location"
 
-      div[class="row career-wrapper"]
-        div[class="col-12 col-md-5"]
-          div[class="row header"]
-            div[class="col-12"]
-              |Career Details
-          div[class="row career-details"]
-            div[class="col-12"]
-              ul
-                - data.components.career.sort_by { |k| k["id"] }.each_with_index do |item, index|
-                  li
-                    = link_to(item.url, target: :_blank) do
-                      = item.name
-
-        div[class="col-12 col-md-7"]
-          div[class="row header"]
-            div[class="col-12"]
-              |Side Hustle
-          div[class="row hustle-details"]
-            div[class="col-12"]
-              ul
-                - data.components.hustle.sort_by { |k| k["id"] }.each_with_index do |item, index|
-                  li
-                    = link_to(item.url, target: :_blank) do
-                      = item.name
+  div[id="crazy-avatar-video-wrapper" class="d-none d-xxl-block col-xxl-8 col-xxxl-9"]
