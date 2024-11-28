@@ -14,17 +14,5 @@ div[class="row mx-0 location-wrapper"]
 
       div[class="col-7 locations-lottie"]
         - if defined?(show_lottie)
-          div[id="locations-lottie-animation"]
-          javascript:
-            document.addEventListener("DOMContentLoaded", function () {
-              lottie.loadAnimation({
-                container: document.getElementById('locations-lottie-animation'),
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: "#{image_url('backgrounds/location/20241027-traveling-ship.json')}",
-                rendererSettings: {
-                  preserveAspectRatio: 'xMidYMid slice'
-                }
-              });
-            });
+          |<script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.min.js"></script>
+          |<lottie-player id="locations-lottie-animation" src="#{image_path('backgrounds/location/20241027-traveling-ship.json')}" background="transparent" speed="1" loop autoplay></lottie-player>
