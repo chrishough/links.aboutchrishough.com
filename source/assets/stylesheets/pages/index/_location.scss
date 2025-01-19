@@ -55,7 +55,7 @@
 
       @include media-breakpoint-up(xxl) {
         @media (height >= 1000px) {
-          background: url('#{$image-path}/backgrounds/location/20241027-vegas-sign.png');
+          background: url('#{$image-path}/backgrounds/location/20241027-vegas-sign-with-post.png');
           background-position: center bottom;
           background-repeat: no-repeat;
           background-size: 40%;
@@ -124,7 +124,7 @@
           }
 
           @include media-breakpoint-up(lg) {
-            @media (height <= 1400px) {
+            @media (height > 1000px) {
               display: flex;
               align-items: center;
               justify-content: center;
