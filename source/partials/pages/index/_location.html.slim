@@ -4,7 +4,7 @@ div[class="row mx-0 location-wrapper"]
       div[class="col-12"]
         = data.settings.locations.description
     div[class="row locations"]
-      div[class="col-5 col-md-12 locations-cities"]
+      div[class="col-5 col-xxl-12 locations-cities"]
         ul
           - data.settings.locations.cities.sort_by { |k| k["id"] }.each_with_index do |place, index|
             ruby:

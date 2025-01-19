@@ -41,6 +41,10 @@
         align-items: flex-start;
         padding-top: 5rem;
         background-size: 45%;
+
+        @media (height >= 1200px) {
+          background-size: 75%;
+        }
       }
 
       @include media-breakpoint-up(xxl) {
@@ -51,7 +55,7 @@
 
       @include media-breakpoint-up(xxl) {
         @media (height >= 1000px) {
-          background: url('#{$image-path}/backgrounds/location/20241027-vegas-sign.png');
+          background: url('#{$image-path}/backgrounds/location/20241027-vegas-sign-with-post.png');
           background-position: center bottom;
           background-repeat: no-repeat;
           background-size: 40%;
@@ -117,6 +121,15 @@
 
           @include media-breakpoint-up(md) {
             display: none;
+          }
+
+          @include media-breakpoint-up(lg) {
+            @media (height > 1000px) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+            }
           }
 
           #locations-lottie-animation {
