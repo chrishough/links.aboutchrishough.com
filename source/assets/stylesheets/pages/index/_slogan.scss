@@ -41,6 +41,10 @@
         align-items: flex-start;
         padding-top: 5rem;
         background-size: 45%;
+
+        @media (height >= 1200px) {
+          background-size: 75%;
+        }
       }
 
       @include media-breakpoint-up(xxl) {
