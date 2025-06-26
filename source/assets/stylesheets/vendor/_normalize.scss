@@ -1,62 +1,20 @@
-// ==========================================================================
-// Normalize.scss based on Nicolas Gallagher and Jonathan Neal's
-// normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
-// ==========================================================================
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-// ==========================================================================
-// Normalize.scss settings
-// ==========================================================================
-
-// Set the default font family here so you don't have to override it later
-$normalized-font-family: sans-serif !default;
-
-// Set to false if you want to drop support for IE 10 and 11.
-$support-for-ie: true !default;
-
-// Set to false if you'd like to use the semantic html5 elements.
-// (header, article, nav, etc.)
-$normalize-vertical-rhythm: false !default;
-
-@mixin normalize-line-height($font-size, $rhythm-unit: $base-line-height) {
-  @if $normalize-vertical-rhythm {
-    line-height: $rhythm-unit / $font-size * 1em;
-  }
-  @else {
-    line-height: 1.15;
-  }
-}
-
-@mixin normalize-margin($values, $font-size, $rhythm-unit: $base-line-height) {
-  @if $normalize-vertical-rhythm {
-    $normalized-values: ();
-    @each $value in $values {
-      @if unitless($value) and $value != 0 {
-        $value: $value * $rhythm-unit / $font-size * 1em;
-      }
-      $normalized-values: append($normalized-values, $value, comma);
-    }
-    margin: $normalized-values;
-  }
-  @else {
-    margin: $values;
-  }
-}
-
-// Document
-// ==========================================================================
+/* Document
+   ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
-  @include normalize-line-height(16px); /* 1 */
+ html {
+  line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-// Sections
-// ==========================================================================
+/* Sections
+   ========================================================================== */
 
 /**
  * Remove the margin in all browsers.
@@ -81,11 +39,11 @@ main {
 
 h1 {
   font-size: 2em;
-  @include normalize-margin(0.67em 0, 2em);
+  margin: 0.67em 0;
 }
 
-// Grouping content
-// ==========================================================================
+/* Grouping content
+   ========================================================================== */
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -108,8 +66,8 @@ pre {
   font-size: 1em; /* 2 */
 }
 
-// Text-level semantics
-// ==========================================================================
+/* Text-level semantics
+   ========================================================================== */
 
 /**
  * Remove the gray background on active links in IE 10.
@@ -180,8 +138,8 @@ sup {
   top: -0.5em;
 }
 
-// Embedded content
-// ==========================================================================
+/* Embedded content
+   ========================================================================== */
 
 /**
  * Remove the border on images inside links in IE 10.
@@ -191,8 +149,8 @@ img {
   border-style: none;
 }
 
-// Forms
-// ==========================================================================
+/* Forms
+   ========================================================================== */
 
 /**
  * 1. Change the font styles in all browsers.
@@ -352,8 +310,8 @@ textarea {
   font: inherit; /* 2 */
 }
 
-// Interactive
-// ==========================================================================
+/* Interactive
+   ========================================================================== */
 
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
@@ -371,8 +329,8 @@ summary {
   display: list-item;
 }
 
-// Misc
-// ==========================================================================
+/* Misc
+   ========================================================================== */
 
 /**
  * Add the correct display in IE 10+.
@@ -389,70 +347,3 @@ template {
 [hidden] {
   display: none;
 }
-
-// ==========================================================================
-// Optional additions - Comment out sections you don't need
-// ==========================================================================
-
-// Box-sizing
-// ==========================================================================
-
-/**
- * Box-sizing border-box FTW
- * This is often added to normalize, though not part of the original
- */
-
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
-
-// Typography helpers
-// ==========================================================================
-
-/**
- * Common typography patterns that work well with normalize
- */
-
-// Remove default margins from common elements
-@if $normalize-vertical-rhythm == false {
-  h1, h2, h3, h4, h5, h6,
-  p, blockquote, pre,
-  dl, dd, ol, ul,
-  form, fieldset, legend,
-  figure,
-  table, th, td, caption,
-  hr {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-// Lists
-// ==========================================================================
-
-/**
- * Remove default list styles
- */
-
-// ol,
-// ul {
-//   list-style: none;
-// }
-
-// Links
-// ==========================================================================
-
-/**
- * Remove text decoration from links by default
- */
-
-// a {
-//   text-decoration: none;
-//
-//   &:hover,
-//   &:focus {
-//     text-decoration: underline;
-//   }
-// }
