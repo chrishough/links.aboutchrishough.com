@@ -6,6 +6,8 @@ if Gem::Version.new( Bundler::VERSION ) < Gem::Version.new( '2.0.0' )
   abort 'Bundler version >= 2.X.X is required'
 end
 
+gem "abbrev"
+gem "ostruct"
 gem 'rake'
 gem 'highline'
 gem 'require_all'
