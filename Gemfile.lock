@@ -148,8 +148,6 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (3.0.4)
-      rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -195,12 +193,11 @@ DEPENDENCIES
   rubocop
   rubocop-performance (~> 1.21.0)
   rubocop-rake (~> 0.6.0)
-  rubocop-rspec (~> 3.0.0)
   slim (~> 4.0)
   titleize
 
 RUBY VERSION
-   ruby 3.3.4p94
+   ruby 3.4.3p32
 
 BUNDLED WITH
    2.5.17

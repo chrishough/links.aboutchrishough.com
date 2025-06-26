@@ -19,7 +19,7 @@ jobs:
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3.4
+          ruby-version: 3.4.3
         if: github.event.pull_request.merged == true
 
       - name: Ruby Version
@@ -84,7 +84,7 @@ jobs:
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./build
         if: github.event.pull_request.merged == true && success()

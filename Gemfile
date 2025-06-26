@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby '3.4.3'
 
 if Gem::Version.new( Bundler::VERSION ) < Gem::Version.new( '2.0.0' )
   abort 'Bundler version >= 2.X.X is required'
@@ -36,5 +36,4 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-performance', '~> 1.21.0'
   gem 'rubocop-rake', '~> 0.6.0'
-  gem 'rubocop-rspec', '~> 3.0.0'
 end
