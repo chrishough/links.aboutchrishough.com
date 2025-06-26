@@ -6564,10 +6564,6 @@ normalize-range@^0.1.2:
   resolved "https://registry.npmjs.org/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
-"normalize-scss@git+https://github.com/chrishough/normalize-scss-fix-use.git#main":
-  version "8.0.0"
-  resolved "git+https://github.com/chrishough/normalize-scss-fix-use.git#df3b0ae903f30bb503d70d96ec4c27ee353499d6"
-
 normalize-url@^1.4.0:
   version "1.9.1"
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-1.9.1.tgz#2cc0d66b31ea23036458436e3620d85954c66c3c"
