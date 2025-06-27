@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
       # ---------------------------------------------------------------
       # Ruby
       # ---------------------------------------------------------------
@@ -26,23 +26,23 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4.3
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Ruby Version
         run: |
           ruby -v
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Setup Ruby Dependencies
         run: |
           gem update bundler
           bundle install --jobs 4 --retry 3
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Test Ruby Dependencies
         run: |
           bundle exec rake -T
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
       # ---------------------------------------------------------------
       # Javascript
       # ---------------------------------------------------------------
@@ -50,40 +50,40 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.6.0
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Node Version
         run: |
           node --version
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Install Yarn
         run: |
           npm install --global yarn
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Yarn Version
         run: |
           yarn --version
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Install Dependencies
         run: |
           yarn install
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
       # ---------------------------------------------------------------
       # Webpack
       # ---------------------------------------------------------------
       - name: Build Webpack File
         run: |
           bundle exec rake webpack:build:production
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
 
       - name: Build Site
         run: |
           export TERM=xterm
           bundle exec middleman build -e production --verbose
-        if: github.event.pull_request.merged == true
+        # if: github.event.pull_request.merged == true
       # ---------------------------------------------------------------
       # Deploy
       # ---------------------------------------------------------------
@@ -93,4 +93,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
-        if: github.event.pull_request.merged == true && success()
+        # if: github.event.pull_request.merged == true && success()
