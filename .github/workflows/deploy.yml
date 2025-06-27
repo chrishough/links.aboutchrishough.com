@@ -1,16 +1,16 @@
 name: Deploy Static Site
 
 
-on:
-  pull_request:
-    types: [closed]
-    branches:
-      - main
-
 # on:
-#   push:
+#   pull_request:
+#     types: [closed]
 #     branches:
 #       - main
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
