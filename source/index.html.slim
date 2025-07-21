@@ -1,6 +1,6 @@
 ---
 id: index
-title: Chris Hough - Always Happy to Help
+title: "#{data.settings.biography.first_name} #{data.settings.biography.last_name} - #{data.settings.meta.focus}"
 layout: index
 ---
 
@@ -20,34 +20,31 @@ layout: index
     .location
       span.location-text
         span.location-dot
-        | Las Vegas, Nevada
+        - last_city = data.settings.locations.cities.last
+        = "#{last_city.city}, #{last_city.state}"
 
     / Avatar
     .avatar-container
-      = image_tag "avatar/20250720.png", alt: "Chris Hough", class: "avatar"
+      = image_tag "avatar/20250720.png", alt: "#{data.settings.biography.first_name} #{data.settings.biography.last_name}", class: "avatar"
 
     / Profile Info
     .profile-info
-      h1 Chris Hough
+      h1 = "#{data.settings.biography.first_name} #{data.settings.biography.last_name}"
       p.bio
         == data.settings.slogan.description
 
     / Journey
     .journey
-      span.city Chicago
-      span.arrow →
-      span.city Boulder
-      span.arrow →
-      span.city Manhattan
-      span.arrow →
-      span.city Portland
-      span.arrow →
-      span.city style="color: var(--crimson);" Vegas
+      - data.settings.locations.cities.each_with_index do |location, index|
+        - if index == data.settings.locations.cities.length - 1
+          span.city style="color: var(--crimson);" = location.city
+        - else
+          span.city = location.city
+          span.arrow →
 
     / Links
     .links
-      = link_to "My Latest Project", "#", class: "link"
-      = link_to "Ruby & AI Blog", "#", class: "link"
-      = link_to "Training Journey", "#", class: "link"
-      = link_to "Work With Me", "#", class: "link"
-      = link_to "Connect on Social", "#", class: "link"
+      - if data.settings.biography.links
+        - data.settings.biography.links.each do |link|
+          = link_to link.label, link.url, class: "link", target: "_blank", rel: "noopener noreferrer"
+

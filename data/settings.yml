@@ -2,47 +2,46 @@ url: https://links.aboutchrishough.com
 
 meta:
   title: Chris Hough
-  focus: Nice to meet you!
+  focus: Always Happy to Help
   description: This is the personal landing page of Chris Hough.  From this site you can connect with me on your favorite social networks, see the products I have developed, research my CV, etc. I am happy to connect with you.  If you have a question for me please reach out!
 
 biography:
   first_name: Chris
   last_name: Hough
-  connect:
-    symbol: '&spades;'
-    name: Connect on LinkedIn
-    url: http://connect.aboutchrishough.com
-  writing:
-    symbol: '&hearts;'
-    name: Blogging on Instagram
-    url: http://writing.aboutchrishough.com
-  thoughts:
-    symbol: '&clubs;'
-    name: Thoughts on X
-    url: http://thoughts.aboutchrishough.com
-  sidehustle:
-    symbol: '&diams;'
-    name: My Side Hustle
-    url: http://sidehustle.aboutchrishough.com
+  links:
+    - id: 1
+      label: Let's Connect
+      url: http://connect.aboutchrishough.com
+    - id: 2
+      label: Detailed CV
+      url: http://resume.aboutchrishough.com
+    - id: 3
+      label: Side Hustle
+      url: http://sidehustle.aboutchrishough.com
+    - id: 4
+      label: Thoughts on X
+      url: http://thoughts.aboutchrishough.com
+    - id: 5
+      label: Biography
+      url: https://aboutchrishough.com
 
 slogan:
   description: "Always Happy to Help. Entrepreneur. Engineer. AI Enthusiast. Aspiring Triathlete. I build with Ruby, AI, APIs, &amp; lead with heart. Let's craft intelligent systems together, &amp; enjoy the video game we call life."
 
 locations:
-  description: For over eighteen years, Chris has embraced the digital nomad lifestyle, working globally while immersing himself in diverse cultures and culinary experiences. He brings curiosity to every room, gratitude to every season, and ambition to every pursuit. Lifelong learning, high performance, and meaningful connection are constants in both his professional and personal life.
   cities:
     - id: 1
       city: Chicago
-      state: IL
+      state: Illinois
     - id: 2
       city: Boulder
-      state: CO
+      state: Colorado
     - id: 3
       city: Manhattan
-      state: NY
+      state: New York
     - id: 4
       city: Portland
-      state: OR
+      state: Oregon
     - id: 5
       city: Las Vegas
-      state: NV
+      state: Nevada
