@@ -1,0 +1,12 @@
+= javascript_include_tag(webpack_asset_path("vendor.js", "site"))
+= javascript_include_tag(webpack_asset_path("site.js", "site"))
+
+|<script async src="//gc.zgo.at/count.js" data-goatcounter="https://linksaboutchrishough.goatcounter.com/count"></script>
+
+- if app.development?
+  javascript:
+    $(document).ready(() => {
+      console.log("[DEV] ------------------------------------------------------------");
+      console.log("[DEV] Site Mode: Development");
+      console.log("[DEV] ------------------------------------------------------------");
+    });

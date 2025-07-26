@@ -1,0 +1,28 @@
+@mixin set-gutters($size: 0) {
+  [class*='col-'] {
+    padding-right: $size;
+    padding-left: $size;
+  }
+
+  > [class*='row'] {
+    margin-right: -$size;
+    margin-left: -$size;
+
+    [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+@mixin background-color-alpha($color: $color-black, $alpha: $backdrop-opacity-default) {
+  background-color: rgba($color, $alpha);
+}
+
+@mixin box-shadow($horiz: 0, $vert: 0, $blur: 0.5rem, $spread: 0.25rem, $color: $color-black, $inset: "") {
+  box-shadow: $horiz $vert $blur $spread $color unquote($inset);
+}
+
+@mixin box-shadow-all-sides ($color: $color-black) {
+  @include box-shadow($color: $color);
+}
