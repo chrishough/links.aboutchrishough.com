@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "vendor/normalize";
 
 * {
   margin: 0;
@@ -51,7 +52,7 @@ body {
   height: 200%;
   top: -50%;
   left: -50%;
-  background-image: 
+  background-image:
     radial-gradient(1px 1px at 20% 30%, white, transparent),
     radial-gradient(1px 1px at 40% 70%, white, transparent),
     radial-gradient(1px 1px at 60% 10%, white, transparent),
@@ -63,7 +64,7 @@ body {
 }
 
 .stars::after {
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 50% 50%, white, transparent),
     radial-gradient(2px 2px at 30% 20%, white, transparent),
     radial-gradient(2px 2px at 70% 80%, white, transparent);
@@ -82,7 +83,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(1px 1px at 10% 20%, #ffffff, transparent),
     radial-gradient(0.5px 0.5px at 25% 40%, #ffffff, transparent),
     radial-gradient(1.5px 1.5px at 40% 15%, #ffffff, transparent),
@@ -104,7 +105,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20% 30%, #ffffff, transparent),
     radial-gradient(2.5px 2.5px at 40% 60%, #ffffff, transparent),
     radial-gradient(1.8px 1.8px at 65% 40%, #ffffff, transparent),
@@ -123,7 +124,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(4px 4px at 15% 50%, #ffffff, transparent),
     radial-gradient(3.5px 3.5px at 50% 20%, #ffffff, transparent),
     radial-gradient(5px 5px at 70% 80%, #ffffff, transparent),
@@ -141,7 +142,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(0.3px 0.3px at 5% 10%, #ffffff, transparent),
     radial-gradient(0.4px 0.4px at 15% 25%, #ffffff, transparent),
     radial-gradient(0.3px 0.3px at 25% 15%, #ffffff, transparent),
@@ -172,7 +173,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 25% 35%, #ffffff, transparent),
     radial-gradient(1.5px 1.5px at 75% 65%, #ffffff, transparent),
     radial-gradient(2.5px 2.5px at 45% 85%, #ffffff, transparent),
@@ -189,19 +190,19 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { 
+  0%, 100% {
     transform: translate(0, 0) scale(1);
     filter: blur(0.3px) brightness(1);
   }
-  25% { 
+  25% {
     transform: translate(30px, -20px) scale(1.1);
     filter: blur(0.2px) brightness(1.2);
   }
-  50% { 
+  50% {
     transform: translate(-20px, 30px) scale(0.95);
     filter: blur(0.4px) brightness(0.9);
   }
-  75% { 
+  75% {
     transform: translate(-40px, -10px) scale(1.05);
     filter: blur(0.3px) brightness(1.1);
   }
@@ -237,7 +238,7 @@ body {
   height: 150%;
   top: -25%;
   left: -25%;
-  background: 
+  background:
     radial-gradient(ellipse at 20% 30%, rgba(255, 23, 68, 0.3) 0%, transparent 40%),
     radial-gradient(ellipse at 80% 70%, rgba(255, 23, 68, 0.2) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(75, 0, 130, 0.1) 0%, transparent 60%);
@@ -252,7 +253,7 @@ body {
   height: 120%;
   top: -10%;
   left: -10%;
-  background: 
+  background:
     radial-gradient(circle at 30% 80%, rgba(255, 23, 68, 0.15) 0%, transparent 30%),
     radial-gradient(circle at 70% 20%, rgba(255, 23, 68, 0.2) 0%, transparent 40%);
   animation: nebulaDrift 150s ease-in-out infinite reverse;
@@ -260,13 +261,13 @@ body {
 }
 
 @keyframes nebulaDrift {
-  0%, 100% { 
+  0%, 100% {
     transform: rotate(0deg) scale(1) translate(0, 0);
   }
   25% {
     transform: rotate(90deg) scale(1.1) translate(10px, -20px);
   }
-  50% { 
+  50% {
     transform: rotate(180deg) scale(1.2) translate(-10px, 10px);
   }
   75% {
@@ -292,7 +293,7 @@ body {
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  box-shadow: 
+  box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.2),
     inset 0 0 30px rgba(255, 255, 255, 0.02);
   max-width: 680px;
@@ -388,7 +389,7 @@ body {
   height: 100px;
   border-radius: 50%;
   border: 3px solid var(--crimson);
-  box-shadow: 
+  box-shadow:
     0 0 30px rgba(255, 23, 68, 0.5),
     0 0 60px rgba(255, 23, 68, 0.3);
   transition: all 0.3s ease;
@@ -442,7 +443,7 @@ body {
 
 .avatar:hover {
   transform: scale(1.05);
-  box-shadow: 
+  box-shadow:
     0 0 40px rgba(255, 23, 68, 0.8),
     0 0 80px rgba(255, 23, 68, 0.4);
 }
@@ -535,7 +536,7 @@ h1 {
   animation: fadeInUp 0.8s ease-out forwards;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  box-shadow: 
+  box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
@@ -561,7 +562,7 @@ h1 {
   background: rgba(0, 0, 0, 0.8);
   border-color: rgba(255, 23, 68, 0.6);
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 8px 25px rgba(255, 23, 68, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 23, 68, 0.2);
@@ -649,7 +650,7 @@ h1 {
   margin: 0;
   line-height: 1;
   letter-spacing: -5px;
-  text-shadow: 
+  text-shadow:
     0 0 30px rgba(255, 23, 68, 0.8),
     0 0 60px rgba(255, 23, 68, 0.4),
     0 0 90px rgba(255, 23, 68, 0.2);
@@ -657,14 +658,14 @@ h1 {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { 
-    text-shadow: 
+  0%, 100% {
+    text-shadow:
       0 0 30px rgba(255, 23, 68, 0.8),
       0 0 60px rgba(255, 23, 68, 0.4),
       0 0 90px rgba(255, 23, 68, 0.2);
   }
-  50% { 
-    text-shadow: 
+  50% {
+    text-shadow:
       0 0 40px rgba(255, 23, 68, 1),
       0 0 80px rgba(255, 23, 68, 0.6),
       0 0 120px rgba(255, 23, 68, 0.3);
@@ -723,7 +724,7 @@ h1 {
 .error-link:hover {
   background: rgba(255, 23, 68, 0.2);
   border-color: rgba(255, 23, 68, 0.8);
-  box-shadow: 
+  box-shadow:
     0 8px 25px rgba(255, 23, 68, 0.4),
     0 4px 12px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 23, 68, 0.4);
@@ -799,11 +800,11 @@ h1 {
   .error-number {
     font-size: 80px;
   }
-  
+
   .error-title {
     font-size: 24px;
   }
-  
+
   .error-message {
     font-size: 16px;
   }
