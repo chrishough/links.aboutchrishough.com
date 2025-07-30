@@ -11,7 +11,7 @@ This is a personal branding/portfolio website built with Middleman static site g
 - **Ruby 3.4.3** with Middleman 4.5+
 - **Webpack 5.94.0** for asset bundling
 - **Slim** templating engine
-- **SCSS** with Bootstrap 5.3.3
+- **SCSS** with custom design system (no longer using Bootstrap)
 - **jQuery 3.7.1** and modern JavaScript (ES6+)
 - Deployment to GitHub Pages
 
@@ -30,7 +30,7 @@ rake server:build:production   # Build for production
 
 ### Deployment
 ```bash
-rake deploy:production    # Deploy to GitHub Pages (gh-pages branch)
+rake deploy:github    # Deploy to GitHub Pages (gh-pages branch)
 ```
 
 ### Linting
@@ -73,10 +73,10 @@ source/
 - External assets loaded through Webpack's `ProvidePlugin` (jQuery as `$`)
 
 ### Responsive Design
-- Custom breakpoints defined in `_responsive.scss`:
-  - xs: 600px, sm: 700px, md: 850px, lg: 992px
-  - xl: 1200px, xxl: 1400px, xxxl: 2500px
+- Modern design system in `_design.scss` with galaxy/space theme
+- Custom animations and effects
 - "Easter egg" content appears at different viewport sizes
+- No longer uses Bootstrap - custom CSS design system
 
 ### Deployment Process
 1. Build assets with `yarn production`
@@ -89,7 +89,7 @@ source/
 ### Ruby
 - Follow `.rubocop.yml` configuration
 - Max line length: 180 characters
-- Target Ruby 3.3.4 syntax
+- Target Ruby 3.4.3 syntax
 
 ### JavaScript
 - ESLint with Airbnb base configuration
@@ -98,8 +98,8 @@ source/
 
 ### SCSS
 - Stylelint with standard-scss configuration
-- Bootstrap-compatible settings
-- Use Bootstrap utilities where possible
+- Custom design system (not Bootstrap)
+- Modern CSS with custom properties (CSS variables)
 
 ## Important Conventions
 

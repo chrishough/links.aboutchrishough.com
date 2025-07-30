@@ -10,7 +10,7 @@ require:
   - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 3.3.4
+  TargetRubyVersion: 3.4.3
   DisplayStyleGuide: false
   NewCops: enable
   Exclude:
