@@ -1,20 +1,33 @@
 ---
 id: four-o-four
+title: "404 - Lost in Space"
 layout: index
 seo: false
 ---
-div[class="row mx-0"]
-  section[class="col-12 section-four-o-four-wrapper"]
-    div[class="row w-100"]
-      div[class="col-12 section-header"]
-        span
-          |&spades;
-        span
-          |&hearts;
-        span[class="title"]
-          a[href="#{data.settings.url}"]
-            |Run Home
-        span
-          |&clubs;
-        span
-          |&diams;
+
+/ Galaxy Background
+.galaxy-bg
+  .stars-distant
+  .stars-small
+  .stars-medium
+  .stars-large
+  .stars-bright
+  .nebula
+
+/ Main Content
+.main-wrapper
+  .glass-container.error-container
+    / Error Code
+    .error-code
+      h1.error-number 404
+      .error-glow
+    
+    / Error Message
+    .error-info
+      h2.error-title Lost in Space
+      p.error-message
+        | Looks like you've drifted too far into the cosmic void. The page you're looking for doesn't exist in this galaxy.
+    
+    / Navigation
+    .error-navigation
+      = link_to "Return to Earth", "/", class: "link error-link"

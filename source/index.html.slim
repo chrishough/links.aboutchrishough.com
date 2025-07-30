@@ -3,25 +3,47 @@ id: index
 layout: index
 ---
 
-div[class="row mx-0"]
-  div[class="col-12 d-xxl-none"]
-    div[class="row"]
-      section[class="col-12 section-biography-wrapper"]
-        = partial "partials/pages/index/biography"
-      section[class="col-12 col-lg-6 section-slogan-wrapper"]
-        = partial "partials/pages/index/slogan"
-      section[class="col-12 col-lg-6 section-location-wrapper"]
-        = partial "partials/pages/index/location", locals: { show_lottie: true }
+/ Galaxy Background
+.galaxy-bg
+  .stars-distant
+  .stars-small
+  .stars-medium
+  .stars-large
+  .stars-bright
+  .nebula
 
-  div[class="d-none d-xxl-flex col-xxl-4 col-xxxl-3 section-xxl-content-wrapper"]
-    div[class="row"]
-      section[class="col-12 col-xxl-12 section-biography-wrapper"]
-        = partial "partials/pages/index/biography"
-    div[class="row"]
-      section[class="col-12 col-lg-6 col-xxl-12 section-slogan-wrapper"]
-        = partial "partials/pages/index/slogan"
-    div[class="row flex-grow-1"]
-      section[class="col-12 col-lg-6 col-xxl-12 section-location-wrapper"]
-        = partial "partials/pages/index/location"
+/ Main Content
+.main-wrapper
+  .glass-container
+    / Current Location
+    .location
+      span.location-text
+        span.location-dot
+        - last_city = data.settings.locations.cities.last
+        = "#{last_city.city}, #{last_city.state}"
 
-  div[id="crazy-avatar-video-wrapper" class="d-none d-xxl-block col-xxl-8 col-xxxl-9"]
+    / Avatar
+    .avatar-container
+      = image_tag "avatar/20250720.png", alt: "#{data.settings.biography.first_name} #{data.settings.biography.last_name}", class: "avatar"
+
+    / Profile Info
+    .profile-info
+      h1 = "#{data.settings.biography.first_name} #{data.settings.biography.last_name}"
+      p.bio
+        == data.settings.slogan.description
+
+    / Journey
+    .journey
+      - data.settings.locations.cities.each_with_index do |location, index|
+        - if index == data.settings.locations.cities.length - 1
+          span.city style="color: var(--crimson);" = location.city
+        - else
+          span.city = location.city
+          span.arrow →
+
+    / Links
+    .links
+      - if data.settings.biography.links
+        - data.settings.biography.links.each do |link|
+          = link_to link.label, link.url, class: "link", target: "_blank", rel: "noopener noreferrer"
+

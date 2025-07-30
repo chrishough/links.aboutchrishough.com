@@ -4,8 +4,6 @@ export default () => {
   $(document).ready(() => {
     const $loader = $('#page-loader');
 
-    let animationCompleted = false;
-
     const log = (...args) => {
       if (!isProduction) {
         console.log('[DEV]', ...args);
@@ -14,24 +12,34 @@ export default () => {
 
     log('Loader element:', $('.loader').length);
 
-    $('.loader').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', () => {
-      log('Animation ended');
-      animationCompleted = true;
-      $loader.addClass('hidden');
+    // Hide loader after window load and minimum display time
+    const minimumDisplayTime = 1500;
+    const startTime = Date.now();
+
+    const hideLoader = () => {
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, minimumDisplayTime - elapsedTime);
 
       setTimeout(() => {
-        $loader.hide();
-      }, 500);
-    });
-
-    setTimeout(() => {
-      if (!animationCompleted && $loader.is(':visible')) {
-        log('Fallback: Removing loader based on timeout');
         $loader.addClass('hidden');
         setTimeout(() => {
           $loader.hide();
         }, 500);
+      }, remainingTime);
+    };
+
+    // Wait for window load
+    $(window).on('load', () => {
+      log('Window loaded');
+      hideLoader();
+    });
+
+    // Fallback timeout
+    setTimeout(() => {
+      if ($loader.is(':visible')) {
+        log('Fallback: Removing loader based on timeout');
+        hideLoader();
       }
-    }, 2000);
+    }, 3000);
   });
 };
