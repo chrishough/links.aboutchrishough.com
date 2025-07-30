@@ -214,13 +214,27 @@ body {
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.8; filter: brightness(1); }
-  50% { opacity: 1; filter: brightness(1.5); }
+  0%, 100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
 }
 
 @keyframes glow {
-  0%, 100% { opacity: 0.9; filter: brightness(1) blur(0.3px); }
-  50% { opacity: 1; filter: brightness(1.3) blur(0.1px); }
+  0%, 100% {
+    opacity: 0.9;
+    filter: brightness(1) blur(0.3px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.3) blur(0.1px);
+  }
 }
 
 /* Nebula effects with 3D depth */
@@ -239,10 +253,10 @@ body {
   top: -25%;
   left: -25%;
   background:
-    radial-gradient(ellipse at 20% 30%, rgb(255 23 68 / 30%) 0%, transparent 40%),
-    radial-gradient(ellipse at 80% 70%, rgb(255 23 68 / 20%) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 30%, rgb(255 23 68 / 10%) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 70%, rgb(255 23 68 / 8%) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgb(75 0 130 / 10%) 0%, transparent 60%);
-  animation: nebulaDrift 100s ease-in-out infinite;
+  animation: nebula-drift 100s ease-in-out infinite;
   filter: blur(40px);
 }
 
@@ -254,13 +268,13 @@ body {
   top: -10%;
   left: -10%;
   background:
-    radial-gradient(circle at 30% 80%, rgb(255 23 68 / 15%) 0%, transparent 30%),
-    radial-gradient(circle at 70% 20%, rgb(255 23 68 / 20%) 0%, transparent 40%);
-  animation: nebulaDrift 150s ease-in-out infinite reverse;
+    radial-gradient(circle at 30% 80%, rgb(255 23 68 / 5%) 0%, transparent 30%),
+    radial-gradient(circle at 70% 20%, rgb(255 23 68 / 7%) 0%, transparent 40%);
+  animation: nebula-drift 150s ease-in-out infinite reverse;
   filter: blur(60px);
 }
 
-@keyframes nebulaDrift {
+@keyframes nebula-drift {
   0%, 100% {
     transform: rotate(0deg) scale(1) translate(0, 0);
   }
@@ -303,11 +317,11 @@ body {
   padding: 40px 30px;
   position: relative;
   overflow: hidden;
-  animation: floatContainer 20s ease-in-out infinite;
+  animation: float-container 20s ease-in-out infinite;
   transform-style: preserve-3d;
 }
 
-@keyframes floatContainer {
+@keyframes float-container {
   0%, 100% {
     transform: translateY(0) rotateX(0deg) rotateY(0deg);
   }
@@ -326,23 +340,19 @@ body {
 }
 
 .glass-container::before {
-  display: none;
-}
-
-.glass-container::before {
   content: '';
   position: absolute;
   inset: -2px;
   background: linear-gradient(45deg, var(--crimson), transparent, var(--deep-red));
   border-radius: 24px;
-  opacity: 0.5;
+  opacity: 0.2;
   z-index: -1;
-  animation: borderGlow 3s ease-in-out infinite;
+  animation: border-glow 3s ease-in-out infinite;
 }
 
-@keyframes borderGlow {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+@keyframes border-glow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
 }
 
 /* Location indicator */
@@ -350,7 +360,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
 .location-text {
@@ -370,12 +380,19 @@ body {
   background: var(--crimson);
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
-  box-shadow: 0 0 10px var(--crimson);
+  box-shadow: 0 0 5px rgb(255 23 68 / 50%);
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
 }
 
 /* Avatar section */
@@ -383,7 +400,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  animation: fade-in-up 0.8s ease-out 0.2s forwards;
 }
 
 .avatar {
@@ -392,8 +409,8 @@ body {
   border-radius: 50%;
   border: 3px solid var(--crimson);
   box-shadow:
-    0 0 30px rgb(255 23 68 / 50%),
-    0 0 60px rgb(255 23 68 / 30%);
+    0 0 15px rgb(255 23 68 / 25%),
+    0 0 30px rgb(255 23 68 / 15%);
   transition: all 0.3s ease;
   object-fit: cover;
 }
@@ -446,8 +463,8 @@ body {
 .avatar:hover {
   transform: scale(1.05);
   box-shadow:
-    0 0 40px rgb(255 23 68 / 80%),
-    0 0 80px rgb(255 23 68 / 40%);
+    0 0 20px rgb(255 23 68 / 40%),
+    0 0 40px rgb(255 23 68 / 20%);
 }
 
 /* Name and bio */
@@ -455,7 +472,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  animation: fade-in-up 0.8s ease-out 0.4s forwards;
 }
 
 h1 {
@@ -484,7 +501,7 @@ h1 {
   margin: 40px 0;
   padding: 0 20px;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  animation: fade-in-up 0.8s ease-out 0.6s forwards;
   flex-wrap: wrap;
   gap: 5px;
 }
@@ -500,7 +517,7 @@ h1 {
 
 .city:hover {
   color: var(--crimson);
-  text-shadow: 0 0 10px rgb(255 23 68 / 50%);
+  text-shadow: 0 0 5px rgb(255 23 68 / 25%);
 }
 
 .arrow {
@@ -534,7 +551,7 @@ h1 {
   position: relative;
   overflow: hidden;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fade-in-up 0.8s ease-out forwards;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   box-shadow:
@@ -564,9 +581,9 @@ h1 {
   border-color: rgb(255 23 68 / 60%);
   transform: translateY(-2px);
   box-shadow:
-    0 8px 25px rgb(255 23 68 / 20%),
+    0 8px 25px rgb(255 23 68 / 10%),
     0 4px 12px rgb(0 0 0 / 30%),
-    inset 0 0 0 1px rgb(255 23 68 / 20%);
+    inset 0 0 0 1px rgb(255 23 68 / 10%);
   color: var(--white);
 }
 
@@ -574,7 +591,7 @@ h1 {
   left: 100%;
 }
 
-@keyframes fadeInUp {
+@keyframes fade-in-up {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -653,25 +670,25 @@ h1 {
   line-height: 1;
   letter-spacing: -5px;
   text-shadow:
-    0 0 30px rgb(255 23 68 / 80%),
-    0 0 60px rgb(255 23 68 / 40%),
-    0 0 90px rgb(255 23 68 / 20%);
-  animation: pulseGlow 2s ease-in-out infinite;
+    0 0 20px rgb(255 23 68 / 40%),
+    0 0 40px rgb(255 23 68 / 20%),
+    0 0 60px rgb(255 23 68 / 10%);
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-@keyframes pulseGlow {
+@keyframes pulse-glow {
   0%, 100% {
     text-shadow:
-      0 0 30px rgb(255 23 68 / 80%),
-      0 0 60px rgb(255 23 68 / 40%),
-      0 0 90px rgb(255 23 68 / 20%);
+      0 0 20px rgb(255 23 68 / 40%),
+      0 0 40px rgb(255 23 68 / 20%),
+      0 0 60px rgb(255 23 68 / 10%);
   }
 
   50% {
     text-shadow:
-      0 0 40px rgb(255 23 68 / 100%),
-      0 0 80px rgb(255 23 68 / 60%),
-      0 0 120px rgb(255 23 68 / 30%);
+      0 0 30px rgb(255 23 68 / 50%),
+      0 0 60px rgb(255 23 68 / 30%),
+      0 0 90px rgb(255 23 68 / 15%);
   }
 }
 
@@ -682,13 +699,13 @@ h1 {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 150px;
-  background: radial-gradient(ellipse at center, rgb(255 23 68 / 30%) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgb(255 23 68 / 10%) 0%, transparent 70%);
   filter: blur(30px);
   z-index: -1;
-  animation: floatGlow 3s ease-in-out infinite;
+  animation: float-glow 3s ease-in-out infinite;
 }
 
-@keyframes floatGlow {
+@keyframes float-glow {
   0%, 100% { transform: translate(-50%, -50%) scale(1); }
   50% { transform: translate(-50%, -50%) scale(1.2); }
 }
@@ -728,9 +745,9 @@ h1 {
   background: rgb(255 23 68 / 20%);
   border-color: rgb(255 23 68 / 80%);
   box-shadow:
-    0 8px 25px rgb(255 23 68 / 40%),
+    0 8px 25px rgb(255 23 68 / 20%),
     0 4px 12px rgb(0 0 0 / 30%),
-    inset 0 0 0 1px rgb(255 23 68 / 40%);
+    inset 0 0 0 1px rgb(255 23 68 / 20%);
 }
 
 
