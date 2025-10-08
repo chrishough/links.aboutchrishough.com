@@ -10,19 +10,19 @@ biography:
   last_name: Hough
   links:
     - id: 1
-      label: Connect Professionaly
+      label: Connect
       url: http://connect.aboutchrishough.com
     - id: 2
-      label: My Company
+      label: Company
       url: http://sidehustle.aboutchrishough.com
     - id: 3
-      label: My Detailed CV
+      label: Resume
       url: http://resume.aboutchrishough.com
     - id: 4
-      label: My Thoughts
+      label: Thoughts
       url: http://thoughts.aboutchrishough.com
     - id: 5
-      label: My Biography
+      label: Biography
       url: https://aboutchrishough.com
 
 slogan:
