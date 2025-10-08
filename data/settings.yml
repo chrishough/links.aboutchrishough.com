@@ -10,23 +10,23 @@ biography:
   last_name: Hough
   links:
     - id: 1
-      label: Let's Connect
+      label: Connect Professionaly
       url: http://connect.aboutchrishough.com
     - id: 2
-      label: Detailed CV
-      url: http://resume.aboutchrishough.com
-    - id: 3
-      label: Side Hustle
+      label: My Company
       url: http://sidehustle.aboutchrishough.com
+    - id: 3
+      label: My Detailed CV
+      url: http://resume.aboutchrishough.com
     - id: 4
-      label: Thoughts on X
+      label: My Thoughts
       url: http://thoughts.aboutchrishough.com
     - id: 5
-      label: Biography
+      label: My Biography
       url: https://aboutchrishough.com
 
 slogan:
-  description: "Always Happy to Help. Entrepreneur. Engineer. AI Enthusiast. Aspiring Triathlete. I build with Ruby, AI, APIs, &amp; lead with heart. Let's craft intelligent systems together, &amp; enjoy the video game we call life."
+  description: "Engineer. Entrepreneur. AI Enthusiast. Aspiring Triathlete. I build with Ruby, AI, APIs, &amp; lead with heart. Always Happy to Help. Let's craft intelligent systems together, work hard, play hard,&amp; enjoy the video game we call life."
 
 locations:
   cities:
