@@ -15,16 +15,9 @@ layout: index
 / Main Content
 .main-wrapper
   .glass-container
-    / Current Location
-    .location
-      span.location-text
-        span.location-dot
-        - last_city = data.settings.locations.cities.last
-        = "#{last_city.city}, #{last_city.state}"
-
     / Avatar
     .avatar-container
-      = image_tag "avatar/20250720.png", alt: "#{data.settings.biography.first_name} #{data.settings.biography.last_name}", class: "avatar"
+      = image_tag "avatar/20251007.png", alt: "#{data.settings.biography.first_name} #{data.settings.biography.last_name}", class: "avatar"
 
     / Profile Info
     .profile-info
