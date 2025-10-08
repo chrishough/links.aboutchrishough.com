@@ -400,22 +400,13 @@ body {
 
 @media (width >= 1024px) {
   .avatar {
-    width: 175px;
-    height: 175px;
-  }
-}
-
-@media (width >= 1440px) {
-  .avatar {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 }
 
 @media (width >= 1920px) {
   .avatar {
-    width: 250px;
-    height: 250px;
     border-width: 5px;
   }
 }
