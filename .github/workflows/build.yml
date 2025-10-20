@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SITE_HOST: ${{ vars.SITE_HOST }}
 
     steps:
       - uses: actions/checkout@v1
@@ -55,8 +57,6 @@ jobs:
           bundle exec rake webpack:build:production
 
       - name: Build Site
-        env:
-          SITE_HOST: ${{ vars.SITE_HOST }}
         run: |
           export TERM=xterm
           bundle exec middleman build -e production --verbose
