@@ -2,6 +2,7 @@
 
 Bundler.require(:default)
 
+require 'dotenv/load'
 require 'pry'
 require 'slim'
 

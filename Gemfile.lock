@@ -182,6 +182,7 @@ DEPENDENCIES
   bigdecimal
   builder
   csv
+  dotenv
   highline
   middleman (~> 4.5, >= 4.5.1)
   middleman-deploy (~> 2.0.0.pre.alpha)
