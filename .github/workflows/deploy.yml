@@ -80,6 +80,8 @@ jobs:
         if: github.event.pull_request.merged == true
 
       - name: Build Site
+        env:
+          SITE_HOST: ${{ vars.SITE_HOST }}
         run: |
           export TERM=xterm
           bundle exec middleman build -e production --verbose
