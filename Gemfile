@@ -11,6 +11,7 @@ gem 'ostruct'
 gem 'rake'
 gem 'highline'
 gem 'require_all'
+gem 'dotenv'
 
 gem 'builder'
 gem 'middleman', '~> 4.5', '>= 4.5.1'
