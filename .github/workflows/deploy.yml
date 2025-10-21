@@ -16,7 +16,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      SITE_HOST: ${{ secrets.SITE_HOST }}
+      SITE_HOST: ${{ vars.SITE_HOST }}
 
     steps:
       - uses: actions/checkout@v1
