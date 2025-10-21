@@ -58,8 +58,6 @@ jobs:
 
       - name: Build Site
         run: |
-          echo "SITE_HOST: ${{ vars.SITE_HOST }}"
-
           export TERM=xterm
 
           bundle exec middleman build -e production --verbose
