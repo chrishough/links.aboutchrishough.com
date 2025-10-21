@@ -57,7 +57,11 @@ jobs:
           bundle exec rake webpack:build:production
 
       - name: Build Site
+        env:
+          SITE_HOST: ${{ vars.SITE_HOST }}
         run: |
+          echo "SITE_HOST: ${{ vars.SITE_HOST }}"
+          echo "Vars context: ${{ toJSON(vars) }}"
           export TERM=xterm
           bundle exec middleman build -e production --verbose
       # ---------------------------------------------------------------
