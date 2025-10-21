@@ -82,7 +82,15 @@ source/
 1. Build assets with `yarn production`
 2. Build static site with `middleman build`
 3. Deploy to gh-pages branch using `middleman-deploy` gem
-4. Available at: https://links.aboutchrishough.com
+4. Site host configured via environment variable `SITE_HOST` (see Environment Configuration below)
+
+### Environment Configuration
+- **Local Development**: Site host is configured in `.env` file (not committed to repo)
+  - `SITE_HOST=links.aboutchrishough.com`
+- **GitHub Actions CI/CD**: Requires GitHub secret configuration
+  - Go to repository **Settings** → **Secrets and variables** → **Actions** → **Secrets**
+  - Add secret: `SITE_HOST` with value from `.env` file
+  - The workflow reads this secret to avoid hardcoding DNS anywhere in the codebase
 
 ## Code Style Requirements
 
