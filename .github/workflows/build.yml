@@ -59,6 +59,7 @@ jobs:
       - name: Build Site
         run: |
           export TERM=xterm
+
           bundle exec middleman build -e production --verbose
       # ---------------------------------------------------------------
       # Quality
