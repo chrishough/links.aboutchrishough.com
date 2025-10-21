@@ -58,9 +58,9 @@ jobs:
 
       - name: Build Site
         env:
-          SITE_HOST: ${{ secrets.SITE_HOST }}
+          SITE_HOST: ${{ vars.SITE_HOST }}
         run: |
-          echo "SITE_HOST: ${{ secrets.SITE_HOST }}"
+          echo "SITE_HOST: ${{ vars.SITE_HOST }}"
 
           export TERM=xterm
 
